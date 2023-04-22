@@ -165,10 +165,12 @@ body {
   
 .philosophie .point {flex-flow:column;justify-content: top;padding:2rem;padding-top: 5rem;}
 .point article {flex-basis: 60%;}
-  .indicators {margin-top: 13vh;left:10px;}
+  .indicators {margin-top: 16vh;left:10px;}
   .point img {margin-right: 5rem;}
-  figure.scroll-logo {bottom: 50px;top: auto;height: 40%;width: 100%;justify-content: space-around;left: 0px;padding-top: 0px;}
-figure.scroll-logo img  {}
+  figure.scroll-logo {bottom: 35px;top: auto;height: 40%;width: 100%;justify-content: space-around;left: 0px;padding-top: 0px;}
+figure.scroll-logo img  {
+    width: 65%;
+}
 }
 @media screen and ( max-height: 780px ) {
 .philosophie .point .third {display:none}
