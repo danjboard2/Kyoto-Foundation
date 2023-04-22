@@ -1,0 +1,112 @@
+#building .container{
+  width: 38%;
+  /* margin: 0 auto; */
+  margin-right: 30%;
+  margin-left: 45%;
+  margin-bottom: 300px;
+  display: inline-block;
+  text-align: left;
+  z-index: 3;
+  position: relative;
+  height: auto;
+  min-height: auto;
+  padding-left: 0;
+}
+
+/* accordion-1 */
+#accordion-1{
+  position: relative;
+}
+
+#accordion-1 .head{
+  background-color: transparent;
+  color: #052C29;
+  padding: 14px 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: left;
+}
+#kyoto-wrapper .scrollContent #accordion-1 .head h2 {font-size: 30px;text-transform:uppercase;margin:0px;margin-bottom: -5px;font-weight: 500;}
+#accordion-1 .head figure {margin-right: 10px;/* height: 47px; */width: 47px;height: 35px;text-align: center;}
+
+#accordion-1 .head:hover, #accordion-1 .active{
+  background-color: transparent;
+}
+#accordion-1 figure img {transform: rotate(0deg);transition:0.3s;transform-origin: center;max-width: 35px;}
+#accordion-1 .active figure img {transform: rotate(135deg);transition:0.3s;transform-origin: center;}
+#accordion-1 .arrow-animate{
+  transform: rotate(0deg);
+  opacity: 1;
+  margin-left: -1px;
+}
+
+#accordion-1 .content{
+  background-color: transparent;
+  text-align: left;
+  display: none;
+  padding: 0px 0px;
+  color: #333333;
+  width: 100%;
+}
+#accordion-1 .content p {font-size: 18px;/* text-transform:uppercase; */font-weight: 200;padding-bottom: 20px;}
+#accordion-1 .content p a {font-size:22px;font-weight: 500;margin-top: 20px;display: inline-block;/* border-bottom:1px solid #000; */color: #072c2a;background: #a1d2b4;padding: 10px 30px;border-radius: 25px;}
+#accordion-1 .content p a:hover {text-decoration:underline}
+/* accordion-2 */
+#accordion-2{
+  position: relative;
+  box-shadow: 0 1px 7px #DBDBDB;
+}
+
+#accordion-2 .head{
+  background-color: #FFFFFF;
+  color: #563e6e;
+  padding: 20px 30px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+#accordion-2 .arrow{
+  content:'';
+  position: absolute;
+  right: 0;
+  right: 30px;
+  top: 65px;
+  opacity: 1;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 40px solid #FFFFFF;
+  transition: 0.3s ease;
+  z-index: 2;
+}
+
+#accordion-2 .head:hover .arrow, #accordion-2 .arrow-animate{
+  border-top: 40px solid #FFE77AFF;
+  transform: translateY(40px);
+}
+
+#accordion-2 .content{
+  background-color: #FFFFFF;
+  display: none;
+  padding: 30px;
+  color: #333333;
+}
+
+#accordion-2 .head:hover, #accordion-2 .active{
+  background-color: #FFE77AFF; 
+}
+@media screen and (max-width: 1000px) {
+  #kyoto-wrapper .scrollContent div#building .info {width: 96% !important;margin-left: 0px;padding-right: 5% !important;}
+#building .container {
+    width: 94%;
+    /* margin: 0 auto; */
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom:300px;
+}
+}
+@media screen and (max-width: 600px) {
+#accordion-1 figure img {max-width: 15px;}
+}

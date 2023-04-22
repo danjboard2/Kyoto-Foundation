@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class="container">
+        <div class="row col-md-12 nav-centre">
+          <div class="col-md-1 nav-centre">
+            <nav id="NavbarList">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="#menu1">1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#menu2">2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#menu3">3</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#menu4">4</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <section id="scroll-fix" class="col-md-11">
+          <div class="col-md-11 item-content" data-spy="scroll" data-target="#NavbarList" data-offset="0">
+            <div id="menu1">
+              <h3>CONSERVATION FOCUSSED</h3>
+              <p>Kyoto Protocol is committed to conservation, positive impact and making a difference in the fight against climate change.</p>
+
+              <p>We are active in large scale forest protection and reforestation projects. We help reduce carbon dioxide, protect habitat, safeguard bio diversity and support local economies. </p>
+                
+              <p>These initiatives are funded by the verification and sale of verified emission reductions (carbon credits) on the Kyoto blockchain.</p>
+            </div>
+            <div id="menu2" style="margin-top:15px;">
+              <h3>Menu - 02</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div id="menu3" style="margin-top:15px;">
+              <h3>Menu - 03</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.there's more content in this one than the other two</p>
+            </div>
+            <div id="menu4" style="margin-top:15px;">
+              <h3>Menu - 04</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.there's more content in this one than the other two</p>
+            </div>
+          </section>
+          </div>
+          <div id="fake-scroll">
+            <div id="logo"><figur title="Kyoto Foundation Logo"><img src="images/logo-window.png"></figure></div>
+            <div id="menu1">
+              <h2>CONSERVATION <span>FOCUSSED</span></h2>
+              <p>Kyoto Protocol is committed to conservation, positive impact and making a difference in the fight against climate change.</p>
+              <p>We are active in large scale forest protection and reforestation projects. We help reduce carbon dioxide, protect habitat, safeguard bio diversity and support local economies.</p> 
+              <p>These initiatives are funded by the verification and sale of verified emission reductions (carbon credits) on the Kyoto blockchain.</p>
+            </div>
+            <div id="menu2"><h2>Some more text</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+            <div id="menu3"><h2>Even more text</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+            <div id="menu4"><h2>Even more, more text</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+        </div>
+        </div>
+      </div>
+
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <script>
+        $('[data-spy="scroll"]').each(function () {
+            console.log('scrollspy loaded')
+})
+        $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
+  // do something...
+  console.log('spying');
+  $(".nav-link").each( function() {
+            if( $(this).hasClass("active") == true ) {
+               // $(this).removeClass("active");
+                console.log($(this).html());
+                var getActiveNav = $(this).html();
+                $('.item-content div').attr("opacity", "0");
+                $('.item-content div').removeClass('active');
+                $('#fake-scroll div').removeClass('active');
+              //  $('.item-content div#menu'+ getActiveNav).addClass('active');
+                $('#fake-scroll div#menu'+ getActiveNav).addClass('active');
+               // $('.item-content div#menu'+ getActiveNav +'.active').attr("opacity", "1");
+            }
+        });
+})
+
+      </script>
+</body>
+</html>

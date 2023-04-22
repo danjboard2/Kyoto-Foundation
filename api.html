@@ -1,0 +1,28 @@
+<script
+  src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+  crossorigin="anonymous"></script>
+<html>
+<body id='bod'><button id="button" type="submit">call</button>
+<div id='div'>
+
+</div></body>
+
+<script type="text/javascript" language="javascript">
+
+$("#button").on("click",function(){
+      //console.log("hii");
+      
+      $.ajax({
+        headers:{  
+     "Accept":"application/json",//depends on your api
+      "Content-type":"application/json"//depends on your api
+        },   url:"https://www.kyotoswap.io/api/token",
+        success:function(response){
+          var r=JSON.parse(response);
+          $("#main").html(r.base);
+        }
+      });
+});
+</script>
+</html>

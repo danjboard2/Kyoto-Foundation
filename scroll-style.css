@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+.philosophie {
+  position: relative;
+}
+
+.indicators {
+  left: 17rem;
+  top: 0;
+  margin:38vh 0;
+  height: 25vh;
+  width: 3px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+}
+
+.indicator {
+  width: 100%;
+  background-color: #adadad;
+  flex-grow: 1;
+  margin: 8px 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Interstate;
+  font-weight: 300;
+}
+
+.vh {
+  height: 100vh;
+  background-color: rgba(16,67,63,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+  font-weight: regular;
+}
+
+.vh:before {
+  content: 'Header/footer'
+}
+
+.philosophie {
+  position: relative;
+}
+
+.indicators {
+  left: 17rem;
+  top: 0;
+  margin: 38vh 0;
+  height: 25vh;
+  width: 3px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 10;
+}
+.indicator {
+  width: 100%;
+  background-color: #adadad;
+  flex-grow: 1;
+  margin: 5px 0;
+  border-radius: 5px;
+  padding: 14px 5px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.indicator.active {background:#052C29 !important}
+
+.indicator a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 20;
+}
+
+.philosophie .point {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20rem;
+  
+}
+
+.philosophie .wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+.point article {
+  flex-basis: 60%;
+  margin-right: auto;
+}
+
+.point img {
+  flex-basis: 25%;
+  max-width: 25vw;
+  height: auto;
+}
+.philosophie .point {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20rem;
+  
+}
+.philosophie .point h3 {font-size: 50px;line-height: 1;margin-bottom:20px;color: #052c29;}
+.philosophie .point p {font-size: 22px;color: #052c29;}
+
+.philosophie .wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+.point article {
+  flex-basis: 50%;
+  margin-right: auto;
+}
+
+.point article.active{ transform: translate(0px, 0px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+.point img {
+  flex-basis: 25%;
+  max-width: 25vw;
+  height: auto;
+}
+
+@media screen and (max-width: 1500px) {
+  .philosophie .point {padding:10rem;}
+  .indicators {left:7rem}
+}
+@media screen and (max-width: 1000px) {
+  .philosophie .point {padding:5rem;}
+  .indicators {left:2rem}
+  .point article {flex-basis:70%}
+}
+@media screen and (max-width: 800px) {
+  .philosophie .point {padding:5rem;}
+  .indicators {left:2rem}
+  .point article {flex-basis:70%;}
+  /* font sizes */
+    .philosophie .point h3{font-size:35px}
+  .philosophie .point p {font-size:16px}
+ .philosophie .butn {font-size:16px;}
+}
+@media screen and (max-width: 700px) {
+  .philosophie .point {padding-right:1rem;}
+}
+@media screen and (max-width: 500px) {
+  
+.philosophie .point {flex-flow:column;justify-content: center;padding: 3rem;padding-right: 1rem;padding-top: 0rem;}
+.point article {flex-basis: 60%;}
+  .indicators {margin-top: 23vh;left: 20px;}
+  .point img {margin-right: 5rem;}
+  figure.scroll-logo {bottom:0px;top: auto;height: 40%;width: 100%;justify-content: space-around;left: 0px;}
+figure.scroll-logo img  {}
+}
+@media screen and ( max-height: 780px ) {
+.philosophie .point .third {display:none}
+}

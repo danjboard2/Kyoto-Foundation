@@ -1,0 +1,1146 @@
+/* fonts */
+@font-face {
+  font-family: 'Digital Numbers';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Digital Numbers'), url('/fonts/DigitalNumbers-Regular.woff') format('woff');
+  }
+@font-face {
+  font-family: Interstate;
+  font-style: normal;
+  font-weight: 100;
+  src: url(../fonts/Interstate-Hairline.otf) format("opentype")
+}
+
+@font-face {
+  font-family: Interstate;
+  font-style: normal;
+  font-weight: 200;
+  src: url(../fonts/Interstate-ExtraLight.otf) format("opentype")
+}
+
+@font-face {
+  font-family: Interstate;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/Interstate-Light.otf) format("opentype")
+}
+
+@font-face {
+  font-family: Interstate;
+  font-style: italic;
+  font-weight: 300;
+  src: url(../fonts/Interstate-LightItalic.otf) format("opentype")
+}
+
+@font-face {
+  font-family: Interstate;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Interstate-Thin.otf) format("opentype")
+}
+
+@font-face {
+  font-family: Interstate;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Interstate-Regular.otf) format("opentype")
+}
+
+@font-face {
+  font-family: Interstate;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Interstate-Bold.otf) format("opentype")
+}
+
+@font-face {
+  font-family: Interstate;
+  font-style: normal;
+  font-weight: 800;
+  src: url(../fonts/Interstate-Black.otf) format("opentype")
+}
+
+@font-face {
+  font-family: Interstate;
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/Interstate-UltraBlack.otf) format("opentype")
+}
+
+/* end custom fonts */
+/*	General styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Interstate", Arial, sans-serif;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dff4e7+0,eeeeee+33,eeeeee+66,dff4e7+100 */
+  background: #dff4e7;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #dff4e7 0%, #eeeeee 33%, #eeeeee 66%, #dff4e7 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #dff4e7 0%,#eeeeee 33%,#eeeeee 66%,#dff4e7 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #dff4e7 0%,#eeeeee 33%,#eeeeee 66%,#dff4e7 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dff4e7', endColorstr='#dff4e7',GradientType=1 );
+  /* IE6-9 */
+  font-size: 13px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  margin: 0px;
+}
+.bg-video, #player {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  width: 177.77777778vh;
+  min-width: 106.6%;
+  min-height: 56.25vw;
+  top: 0px;
+  left: -3.9%;
+  border: 0px;
+  /* display: none; */
+}
+.video-overlay {width:100%;height: 100vh;min-height: 56.25vw;position:absolute;z-index:2;}
+:focus-visible {outline:none}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+figure {
+  margin: 0px;
+}
+
+figure.scroll-logo {
+    position: absolute;
+    right: 15%;
+    width: 25%;
+    display:flex;
+    height: 100%;
+    align-items: center;
+    padding-top: 80px;
+}
+figure.scroll-logo img {height: fit-content;}
+
+body #foundation {
+  max-width: 3000px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Interstate", arial, serif;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 113%;
+  text-align: left;
+  margin-bottom: 0px;
+}
+h2 {font-size:35px}
+p {font-size: 22px;font-weight: 200;}
+/* Animate on scroll */
+/* Trigger  */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  }
+
+/* Optional Delays, change values here  */
+/* .one { animation-delay: 0.2s !important;backface-visibility: hidden;opacity: 0; }
+.two {animation-delay: .4s !important;backface-visibility: hidden;}
+.three { animation-delay: 0.6s !important;backface-visibility: hidden;opacity: 0; }
+.four { animation-delay: 0.8s !important; backface-visibility: hidden;opacity: 0;}
+.five { animation-delay: 1.2s !important;backface-visibility: hidden; opacity: 0;} */
+
+.modal {background: linear-gradient(180deg, rgba(22, 85, 80, 0.83) 15.91%, rgba(9, 49, 46, 0.83) 100%);border-radius:10px;padding: 10px 30px;text-align: center;}
+.modal p {color:#DFF4E7;line-height: 38px;font-size: 28px;margin-bottom: 20px;}
+/* Animations start here  */
+
+/* FADE IN  */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; } }
+.fadeIn { animation-name: fadeIn; }
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; } }
+.fadeOut { animation-name: fadeout; }
+
+/* FADE IN DOWN */
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translate3d(0, -100%, 0); }
+  to { opacity: 1; transform: none; } }
+.fadeInDown { animation-name: fadeInDown; }
+
+/* FADE IN UP */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate3d(0, 20px, 0); }
+  to { opacity: 1; transform: none; } }
+.fadeInUp { animation-name: fadeInUp; }
+
+/* FADE IN UP BIG */
+
+@keyframes fadeInUpBig {
+  from { opacity: 0; transform: translate3d(0, 100px, 0); }
+  to { opacity: 1; transform: none; } }
+.fadeInUpBig { animation-name: fadeInUpBig; }
+
+/* FADE IN LEFT */
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translate3d(-30px, 0, 0)rotateZ(30deg); }
+  to { opacity: 1; transform: none; } }
+.fadeInLeft { animation-name: fadeInLeft; }
+
+@keyframes slideInLeft {
+  from { opacity: 0; margin-left:-300px; }
+  to { opacity: 1; margin-left:0px; transform: none; } }
+.slideInLeft { animation-name: slideInLeft; }
+
+/* FADE IN LEFT BIG */
+
+@keyframes fadeInLeftBig {
+  from { opacity: 0; transform: translate3d(-100px, 0, 0); }
+  to { opacity: 1; transform: none; } }
+.fadeInLeftBig { animation-name: fadeInLeftBig; }
+
+/* FADE IN RIGHT */
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translate3d(100%, 0, 0); }
+  to { opacity: 1; transform: none; } }
+.fadeInRight { animation-name: fadeInRight; }
+
+
+.fadeinup.in-view {
+  animation: fadeInUp 2.5s;
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+  }
+  .number.fadeinup.in-view {
+      animation: fadeInUp 1s;
+      animation-fill-mode: both;
+      backface-visibility: hidden;
+      }
+      .fadeinleft.in-view {
+          animation: slideInLeft 2.5s;
+          animation-delay: 0.4s;
+          animation-fill-mode: both;
+          backface-visibility: hidden;
+          margin-left: 0px;
+      }
+/* @end standard animates  */
+/* hr anim */
+body #foundation hr.separator {
+  margin-top: 60px;
+  margin-bottom: 0px;
+  border: 0;
+}
+
+body #foundation hr.separator--line {
+  border: 0;
+  border-bottom: 2px solid #5A5A5A;
+  width: 0;
+  -webkit-animation: separator-width 1s ease-in-out forwards;
+  animation: separator-width 1s ease-in-out forwards;
+  animation-delay:1.2s;
+}
+
+@-webkit-keyframes separator-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes separator-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+/* hero section*/
+body #foundation #topbox {background-image: url('../images/topbox-hero.jpg');position: relative;min-height: 800px;height: 100vh;width: 101.2%;background-size: cover;background-position: inherit;background-position-y: 0px;overflow: hidden;}
+
+body #foundation #topbox #contents {
+  overflow: hidden;
+  padding: 4% 8%;
+  padding-top: 3.5%;
+  /* position: relative; */
+  padding-left: 0%;
+  padding-bottom: 0px;
+  min-height: 800px;
+  height: 100vh;
+  max-height: 830px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  /* visibility: hidden; */
+}
+
+body #foundation #logo-login {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 2;
+  position: relative;
+}
+
+body #foundation div.logo {
+  display: flex;
+  /* height: 48px; */
+  align-items: center;
+  width: fit-content;
+}
+
+body #foundation .menuinner div.logo {
+  margin-left: 5%;
+}
+
+body #foundation .logo h3 {
+  color: #dff4e7;
+  font-size: 28px;
+  margin: 0px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 30px;
+  text-align: left;
+}
+
+body #foundation .logo h3 span {
+  font-weight: 300;
+}
+body #foundation .menuinner a {text-decoration:none;}
+body #foundation div.logo figure {
+  margin-right: 10px;
+  flex-shrink: 0;
+  display: flex;
+  max-width: 55px;
+}
+
+body #foundation #topbox h1 {
+  color: #dff4e7;
+  font-size: 60px;
+  margin-bottom: 30px;
+  text-shadow: 1px 2px 6px #000000,  1px 2px 6px #000000;
+}
+
+body #foundation #topbox h1 span {
+  color: #A1D2B4;
+  font-style: italic;
+  font-weight: bold;
+}
+
+body .butn {
+  background: #E1F51F;
+  padding: 9px 20px;
+  padding-bottom: 7px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  width: fit-content;
+}
+body .butn span {display:flex;align-items:Center;margin-bottom: 0px;color: #052C29;}
+body .butn.coming {background:#bcbec0;transition:0.3s;display: inline-block;text-align: center;}
+body .login .butn.coming {
+  color:#daf5e6;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: right;
+  }
+body .butn span svg {margin-top:-7px;margin-left: 1px;padding: 6px;}
+body .butn.coming span {display:none; transition:0.3s;}
+body .butn.coming:before {content:'COMING SOON';transition:0.3s;z-index: 2;position: relative;display: block;}
+body #foundation #topbox .text p {
+  color: #dff4e7;
+  font-size: 30px;
+  line-height: 40px;
+  max-width: 65%;
+  padding-bottom: 36px;
+  font-weight: 300;
+  text-shadow: 1px 2px 4px rgb(0 0 0), 3px 0px 4px #000000, -4px -1px 4px #000000, 3px 0px 4px #000000;
+}
+
+body #foundation #topbox div.login {
+  display: flex;
+  height: 55px;
+  align-items: center;
+  text-align: right;
+  flex-shrink: 1;
+}
+body #foundation #topbox div.login figure {flex-shrink:1;width: 40px;}
+body #foundation #topbox div.login svg {
+  margin-left: 0px;
+  width: 32px;
+}
+
+body #foundation #topbox div.login span {
+  color: #dff4e7;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+body #foundation #topbox div.text {
+  width: 60%;
+  min-width: 30%;
+  padding-top: 20px;
+  z-index: 3;
+  position: relative;
+  padding-bottom: 6%;
+  display: flex;
+  flex-flow: column;
+  margin-left: 10%;
+}
+body #foundation #topbox .ticker {display:flex;flex-flow:column;width: 190px;position: absolute;bottom: 12px;left: 5%;align-items: center;}
+body #foundation #topbox .ticker .inner-ticker {background:#fff;border-radius: 5px;padding: 5px;border: 1px solid #000000cf;box-shadow: inset 0px 0px 6px 2px #221b1b, 3px 2px 4px 0px #00000080;}
+body #foundation #topbox .ticker h4 {color:#e1f547;font-size: 18px;text-shadow: 1px 2px 6px #000000, 1px 2px 6px #000000;}
+body #foundation #topbox .ticker .inner-ticker p {margin:0px;font-family:'Digital Numbers';text-align:right;padding: 2px;}
+body #foundation #topbox div.socials {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  align-items: flex-end;
+  z-index: 2;
+  position: relative;
+  margin-top: -40px;
+}
+
+body #foundation #topbox div.socials div.socials {
+  display: flex;
+  flex-flow: row;
+  max-width: 270px;
+}
+
+body #foundation #topbox div.socials div.socials a:last-of-type figure {
+  padding-right: 0px;
+}
+
+body #foundation #topbox div.socials figure {
+  padding: 10px;
+}
+
+body #foundation #topbox div.audit {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  max-width: 220px;
+  color: #dff4e7;
+  font-size: 16px;
+  justify-content: end;
+  margin-top: 10px;
+}
+
+body #foundation #topbox div.audit p {
+  margin: 0px;
+  margin-right: 10px;
+}
+
+body #foundation #topbox div.audit figure {
+  max-width: 50%;
+  width: 50% !important;
+  padding: 0px !important;
+  display: flex;
+}
+
+body #foundation #topbox div.phone {
+  position: absolute;
+  right: 27%;
+  bottom: -21%;
+  width: 15%;
+  z-index: 2;
+}
+
+body #foundation #topbox figure.logo-bg {
+  position: absolute;
+  top: 0px;
+  right: 2.5%;
+  z-index: 0;
+  /* max-width: 600px; */
+  bottom: 0px;
+  overflow: hidden;
+}
+
+figure.logo-bg img {
+  float: right;
+}
+
+/* safe, convenient, secure */
+body #foundation #safe {
+  display: inline-block;
+  width: 100%;
+}
+
+body #foundation #safe .numbers {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+body #foundation #safe .numbers .number {
+  width: 17%;
+  margin-top: 60px;
+  text-align: center;
+}
+
+body #foundation #safe .numbers .number p {
+  display: flex;
+  flex-flow: column;
+  font-weight: 500;
+  color: #5A5A5A
+}
+
+body #foundation #safe .numbers .number p span {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #052C29;
+}
+
+body #foundation #safe .numbers .number p {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* secure from the ground up */
+body #foundation #safe .secure {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+body #foundation #safe .secure .secure-text {
+  display: flex;
+  overflow: hidden;
+  border-radius: 30px;
+  min-width: 1200px;
+  flex-flow: row;
+  position: relative;
+  justify-content: center;
+  margin-top: 80px;
+  background: rgb(20,83,78);
+  background: -moz-radial-gradient(right, circle cover, rgba(20,83,78,1) 0%, rgba(3,35,33,1) 50%, rgba(3,35,33,1) 100%);
+  background: -webkit-radial-gradient(right, circle cover, rgba(20,83,78,1) 0%,rgba(3,35,33,1) 50%,rgba(3,35,33,1) 100%);
+  background: radial-gradient(circle at center, rgb(18 71 67) 50%,rgba(3,35,33,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#14534e', endColorstr='#032321',GradientType=1 );
+}
+
+/* Fast, green, secure */
+body #foundation #fast {display:inline-block;width:100%;text-align:center;padding: 180px 0px;padding-bottom: 0px;}
+body #foundation #fast .butn {margin:0 auto; margin-top:40px}
+body #foundation #fast .slogan {display:flex;justify-content: center;align-items: center;flex-flow: column;}
+body #foundation #fast .slogan figure {margin-bottom:40px;}
+body #foundation #fast h2 {text-transform: uppercase;font-size: 50px;margin-left: 20px;font-weight: 700;color: #052c29;}
+body #foundation #fast h2 span {color:#2D6A65;font-style: italic;}
+body #foundation #fast p {font-size:25px;font-weight:500;max-width: 700px;margin: 0 auto;margin-top: 20px;color: #052c29;}
+
+/* Eco Blocks */
+body #foundation #eco-blocks {position:relative;overflow:hidden;display:flex;width:100%;justify-content: space-between;padding: 120px 6.5%;background: #225450;background: -moz-radial-gradient(center, ellipse cover,  #225450 40%, #09312e 100%);background: -webkit-radial-gradient(center, ellipse cover,  #225450 40%,#09312e 100%);background: radial-gradient(ellipse at center,  #225450 40%,#09312e 100%);}
+body #foundation #eco-blocks .contours {position:absolute;z-index:1;top: 0px;bottom: 0px;left: 0px;width: auto;display: block;left: 0px;height: 100%;}
+body #foundation #eco-blocks .innerblock {z-index:2;background: #daede2;flex-basis: 17.5%;border-radius: 10px;border: 2px solid #3d7069;transition: 0.3s;transform: scale(1.0);}
+/* body #foundation #eco-blocks .innerblock:hover {transform:scale(1.1); transition:0.3s;} */
+body #foundation #eco-blocks .innerblock figure {display: inline-block;width: 100%; text-align:center; padding-top:10px;}
+body #foundation #eco-blocks .innerblock figure img {min-width: 25%;width: 80px;}
+body #foundation #eco-blocks .innerblock h3 {font-size:25px;border-radius: 7px 7px 0px 0px;color:#DFF4E7;text-align: left;padding: 20px 20px;background: #225450;background: -moz-linear-gradient(top,  #225450 0%, #09312e 100%);background: -webkit-linear-gradient(top,  #225450 0%,#09312e 100%);background: linear-gradient(to bottom,  #225450 0%,#09312e 100%);}
+body #foundation #eco-blocks .innerblock p {font-size:16px;padding: 20px;padding-bottom: 0px;font-weight: 300;}
+
+/* green, fast etc icons */
+body #foundation #top-icons {padding:100px 0px 80px 0px;backface-visibility: hidden;}
+body #foundation #top-icons #icons {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+}
+body #foundation #top-icons #icons {text-align:center;}
+body #foundation #top-icons #icons img {max-width: 60%;}
+body #foundation #top-icons #icons .text {text-align:center;padding: 5% 10%;}
+body #foundation #top-icons #icons .text h3 {font-size:30px;margin: 0px;}
+body #foundation #top-icons #icons .text p {font-size:16px;margin-bottom: 0px;font-weight: 200;}
+
+body #foundation #safe .secure .secure-text figure {width: 50%;position: relative;}
+body #foundation #safe .secure .secure-text figure img {position: absolute;left: 0px;bottom: 0px;top: 0px;max-width: 800px;}
+body #foundation #safe .secure .secure-text .right {width: 50%;position: relative;margin-bottom: 34px;padding-right: 40px;}
+body #foundation #safe .secure .secure-text .right h3 {color: #DFF4E7;text-transform: uppercase;font-size: 26px;margin-top: 50px;}
+body #foundation #safe .secure .secure-text .right p {color: #DFF4E7;font-size: 18px;text-transform: uppercase;margin: 0px;font-weight: 300;}
+body #foundation #safe .secure .secure-text .right .check {display: flex;margin-bottom: 14px;}
+body #foundation #safe .secure .secure-text .right .check figure {width: 40px;flex-shrink: 0;margin-top: -2px;}
+body #foundation h3.safe {width:100%;text-align:center;font-size: 26px;font-weight:500;text-transform:uppercase;margin: 90px 0px;margin-bottom: 60px;color: #052C29;}
+
+body #foundation #details {
+  background: transparent;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+body #foundation #details #block {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 80px 0px 100px 0px;
+  backface-visibility: hidden;
+}
+
+body #foundation #scrollable {position: relative;}
+
+body #foundation #details #block.vision {margin-top:0px;}
+body #foundation #details #block h4 {color:#77807B;text-transform:uppercase;text-align: center;margin-bottom: 14px;font-weight: 300;font-size: 25px;}
+body #foundation #details #block h2{text-align:center;font-size: 35px;text-transform:uppercase;margin-top: 0px;}
+body #foundation #details #block .details-image figure {padding: 0%;position: relative;text-align: center;max-width: 650px;}
+body #foundation #details #block .details-image figure img {border-radius:20px;position: relative;z-index: -1;}
+body #foundation #details #block .details-image figure img.veritree {position:absolute;bottom: -12%;left: -15%;width: 30%;z-index: 1;}
+body #foundation #details #block .details-image figure img.pattern1 {position:absolute;top: -11%;right: -9.5%;width: 32%;z-index: -1;border-radius: 0px;}
+body #foundation #details #block .details-image figure img.pattern2 {position:absolute;top: -75px;left: -70px;z-index: 1;width: 50% !important;}
+body #foundation #details #block #content {flex-flow:row;display:flex;margin-top: 40px;}
+body #foundation #details #block #content .text {display:flex;flex-flow:column;align-self: center;width: 100%;}
+body #foundation #details #block #content .details-wrap {display:flex;flex-flow: row;padding-bottom: 50px;align-items: center;}
+body #foundation #details #block #content .details-wrap:last-of-type {padding-bottom:0px;}
+body #foundation #details #block #content .details-image {width: 70%;display: flex;align-items: center;}
+body #foundation #details #block #content .details-wrap div:nth-of-type(2) {padding-left: 0%;color: #052C29;width: 70%;padding-left: 20px;}
+body #foundation #details #block #content .details-wrap .icon {display:flex;align-self:center;width: 17%;align-self: auto;}
+body #foundation #details #block #content .details-wrap .icon figure {border-radius: 10px;width: 100%;align-self: center;}
+body #foundation #details #block #content .details-wrap .icon figure img {}
+body #foundation #details #block #content .details-wrap h3 {font-size:25px;margin-bottom: 0px;margin-top: 0px;}
+body #foundation #details #block #content .details-wrap p {font-size:18px;text-transform:uppercase;font-weight: 200;margin-top: 14px;margin-bottom: 0px;}
+body #foundation #details #block #content .details-wrap a {color:#2e4c4a}
+
+/* building */
+div#building h2 span {font-style:italic;}
+#details #building .accordion h2, body #foundation div#validated h2 {font-size: 25px;font-weight:500;margin-bottom: 0px;padding-bottom: 0px;padding-top: 0px;}
+
+#details #building h2 {
+  text-align: left;
+  font-size: 50px;
+  padding-bottom: 0px;
+  /* padding-top: 100px; */
+  /* text-transform: uppercase; */
+}
+div#building .info {width: 65%;padding-right: 15%;text-align:left;display: inline-block;margin-left: 45%;margin-bottom: 20px;z-index: 5;}
+div#building .info h2,  body #foundation div#building .info h2 span  {line-height: 65px;margin-bottom:20px;font-size: 50px;}
+div#building .info h2 span  {line-height: 65px;margin-bottom:20px;}
+body #foundation div#building {max-width: 100%;min-height: 600px;display: flex;flex-flow: column;flex: 1 0 auto;/* padding-top: 100px; */padding-bottom: 2%;}
+body #foundation div#building .info p {font-weight: 200;font-size: 18px;margin-top: 12px;width:75%;}
+
+/* validated */
+div#validated {background-image: url('../images/validated.jpg');background-size: cover;background-position-y: 5%;margin-top: -150px;padding-top: 150px;max-width: 100%;z-index: 1;position: relative;}
+body #foundation div#validated h2 {color:#fff;}
+body #foundation div#validated h2,  body #foundation div#building .info h2 span  {margin-bottom: 60px;font-size: 50px;text-align: center;text-transform: uppercase;}
+
+body #foundation div#validated #timeline h2 {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+body #foundation div#validated #timeline {padding-bottom:100px;}
+body #foundation div#validated #timeline .right h2 {
+ text-align:left;
+}
+body #foundation div#validated #timeline .left h2 {
+ text-align:right;
+}
+body #foundation div#validated h2 span {color:#E1F51F; font-style:italic;}
+body #foundation div#validated .community {padding:60px 0px;text-align: center;}
+body #foundation div#validated .community h3 {font-size:30px; font-weight:500; color:#c7ddd1; text-transform:uppercase;}
+body #foundation div#validated .community .butn {background:#E1F51F;padding: 10px 30px;padding-bottom: 8px;border-radius:30px;flex-basis: content;display: inline-flex;font-size: 22px;color: #052C29;font-weight: 500;align-items: center;margin-right:40px;z-index: 1;position: relative;margin-top: 20px;border: none;}
+body #foundation div#validated .community .butn figure {display:flex; margin-right:10px;}
+body #foundation div#validated .community .butn figure img {max-width:100%;}
+
+/* ecosystem*/
+body #foundation #ecosystem {/* padding: 60px 0px; */position: relative;z-index: 2;margin-top: -500px;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e1f51f+0,ffffff+55 */background: #e1f51f; /* Old browsers */background: -moz-radial-gradient(center, ellipse cover,  #e1f51f 0%, transparent 55%); /* FF3.6-15 */background: -webkit-radial-gradient(center, ellipse cover,  #e1f51f 0%,transparent 55%); /* Chrome10-25,Safari5.1-6 */background: radial-gradient(ellipse at 150%,  #e1f51f 0%,transparent 55%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1f51f', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+body #foundation #ecosystem figure img {width: 100%;}
+
+body #foundation #eco-inner {width: 100%;margin:0 auto;display:flex;}
+body #foundation #eco-inner .card {width:25%;display: flex;overflow: hidden;}
+body #foundation #eco-inner .card .pocket {margin-right: -150px;position: relative;/* overflow: hidden; */}
+body #foundation #eco-inner .card .outer {display: flex;align-items: center;}
+body #foundation #eco-inner .card .wrap {display:flex;background:#e0f3e8;width: 100%;min-height: 175px;padding-left: 67px;padding-right: 30px;border-radius: 0px 100px 100px 0px;justify-content: center;text-transform: uppercase;z-index: 0;backface-visibility: hidden;}
+body #foundation #eco-inner .card .wrap figure {display:flex;}
+body #foundation #eco-inner .card .wrap img {max-width: 80px;padding-right: 20px;}
+body #foundation #eco-inner .card .pocket figure {}
+body #foundation #eco-inner .card .pocket figure img {max-width: 150px;z-index: 1;position: relative;}
+body #foundation #eco-inner .card .text {display:flex;flex-flow: column;align-self: center;background: transparent;}
+body #foundation #eco-inner .card .text h3, body #foundation #eco-inner .card .text p {margin:0px;}
+body #foundation #eco-inner .card .text h3 {margin-bottom:10px;font-size: 22px;}
+body #foundation #eco-inner .card .text p {font-weight:200;font-size: 14px;}
+body #foundation #eco-inner .card .text p small {
+  padding-top: 16px;
+  display: inline-block;
+}
+/* offset */
+body #foundation #details.offset {background:#fff;}
+body #foundation #details.offset #block #content {margin-top:0px;}
+body #foundation #details.offset #block #content .details-wrap {justify-content: flex-end;}
+body #foundation #details.offset  #block {padding-top: 10px;backface-visibility: hidden;padding-bottom: 0px;}
+body #foundation #details.offset  #block .details-image figure img {max-width:400px;}
+body #foundation #details.offset #block #content .details-image {margin-top:-40px;}
+
+/* vision */
+body #foundation #details.vision {background:#fff;}
+body #foundation #details.vision #block #content {margin-top: 40px;}
+body #foundation #details.vision #block #content .details-wrap {justify-content: flex-end;}
+body #foundation #details.vision  #block {padding-top: 10px;backface-visibility: hidden;}
+body #foundation #details.vision  #block .details-image figure img {max-width:600px;}
+
+
+/* join, buy, earn */
+body #foundation #safe .jbe {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+body #foundation #safe .jbe .container {width: 80%;display: flex;justify-content: space-around;}
+body #foundation #safe .jbe .container div {width:30%; padding:1%; text-align:center;}
+body #foundation #safe .jbe .container div h4 {font-size: 20px;text-transform:uppercase;margin:0px;font-weight: 500;}
+body #foundation #safe .jbe .container div p {text-transform:uppercase;font-size: 16px;font-weight:500;color:#5A5A5A;padding: 0% 14%;}
+body #foundation #safe .jbe .container div figure {padding: 15px 70px;padding-top: 0px;}
+body #foundation #safe .jbe .container div figure img {width:40px;min-width: 40px;}
+body #foundation hr.rule {
+width: 75%;
+display: block;
+height: 1px;
+border: 0;
+border-top: 1px solid #052C29;
+padding: 0;
+margin-top: 70px;
+margin-bottom: 0px;
+}
+
+/* timeline */
+/* The actual timeline (the vertical ruler) */
+#timeline .timeline {position: relative;max-width: 50%;margin: 0 auto;}
+#timeline .timeline h2 {color:#DFF4E7;font-size: 30px;margin-bottom:0px;margin-top: 0px;line-height: 32px;font-weight: 500;}
+#timeline .timeline p {color:#DFF4E7;/* text-transform:uppercase; */margin-top: 10px;font-size: 18px;font-weight: 200;}
+/* The actual timeline (the vertical ruler) */
+#timeline .timeline::after {
+content: '';
+position: absolute;
+width: 1px;
+background-color: white;
+top: 0;
+bottom: 0;
+left: 50%;
+margin-left: 0px;
+}
+
+/* Container around content */
+#timeline .container {
+padding: 5px 20px;
+position: relative;
+background-color: inherit;
+width: 50%;
+display: inline-block;
+height: auto;
+overflow: visible;
+min-height: auto;
+}
+
+/* The circles on the timeline */
+#timeline .container::after {
+content: '';
+position: absolute;
+width: 25px;
+height: 25px;
+right: -13px;
+background-color: #072a27;
+border: 2px solid #ffffff;
+top: 15px;
+border-radius: 50%;
+z-index: 1;
+}
+#timeline .container.finish::after {
+content: '';
+position: absolute;
+width: 14px;
+height: 14px;
+right: -7px;
+background-color: #e1f51e;
+border: 4px solid #e1f51e;
+top: 27px;
+border-radius: 50%;
+z-index: 1;
+}
+#timeline .container.start::after {
+content: '';
+position: absolute;
+width: 25px;
+height: 25px;
+background-color: #a1d2b4;
+border: 4px solid #a1d2b4;
+top:-5px;
+left: -12px;
+border-radius: 50%;
+z-index: 1;
+}
+
+/* The circles on the timeline */
+#timeline .container.done::after {
+content: '';
+position: absolute;
+width: 25px;
+height: 25px;
+right: -12px;
+left: -12px;
+background-color: #e1f51e;
+border: 4px solid #e1f51e;
+top: 15px;
+border-radius: 50%;
+z-index: 1;
+}
+
+/* Place the container to the left */
+#timeline .left {
+left: 0;
+  text-align:right;
+}
+
+/* Place the container to the right */
+#timeline .right {
+left: 50%;
+text-align:left;
+}
+
+
+/* Fix the circle for containers on the right side */
+#timeline .right::after {
+left: -12px;
+}
+
+/* The actual content */
+#timeline .content {
+padding: 20px 10px;
+background-color: transparent;
+position: relative;
+border-radius: 6px;
+padding-top: 6px;
+}
+#timeline .right.start .content  {height:150px}
+
+
+/* offset */
+body #foundation div#offset {background:#fff;padding-bottom: 170px;padding-top: 0px;z-index: 1;position: relative;text-align: center;}
+body #foundation div#offset img {max-width: 90px;}
+body #foundation div#offset h3.offset, body #foundation div#offset h3.offset span {font-size: 35px;margin-top: 30px;}
+body #foundation div#offset h3.offset span {font-style:italic; color:#A1D2B4;}
+
+/* footer */
+body #foundation div#footer .wrap .row a p {font-size: min(max(12px, 3vw), 18px);}
+body #foundation div#footer {display:flex;align-content:center;justify-content:center;flex-flow: column;flex-wrap: wrap;width: 100%;}
+body #foundation div#footer #copyright {margin-top: 60px;margin-bottom: 60px;text-align: center;}
+body #foundation div#footer .wrap {display:flex;width:80%;border: 2px solid #052C29;border-left:none;border-right:none;padding:10px 0px;text-transform:uppercase;color:#052C29;z-index: 1;}
+body #foundation div#footer .wrap .row {width: 20%;flex-grow: 1;display: block;}
+body #foundation div#footer .wrap .row a {text-decoration:none;width: 50px;}
+body #foundation div#footer .wrap .row.mobile {display:none}
+body #foundation div#footer .wrap .row.left {justify-content:space-between;display: flex;flex-flow: column;padding: 1%;align-items: center;font-weight: 100;width: auto;flex-grow: 5;}
+body #foundation div#footer .wrap .row.left figure {text-align:center;}
+body #foundation div#footer .wrap .row.left figure img {max-width: 190px;}
+body #foundation div#footer .wrap .row.social {display:flex;/* justify-content: right; */align-items: center;align-self: end;width: 300px;height: 40px;}
+body #foundation div#footer .wrap .row.social figure {height: 100%;padding-bottom: 3%;width: 75%;padding: 15%;margin-right: 0px;}
+body #foundation div#footer .wrap .row a.button {background: #e2f51e;padding: 6px 5px;padding-top: 9px;border-radius:30px;font-size: 18px;font-weight:500;color:#052C29;/* border:1px solid #052C29; */width: 70%;text-align: center;margin-top: 20px;margin-bottom: 10px;}
+body #foundation div#footer .wrap .row h4, body #foundation div#footer .wrap .row #accordion-1 .head p {font-size: 20px;font-weight:500;margin: 14px;text-align: left;padding-left: 15%;}
+body #foundation div#footer .wrap .row a p {font-weight:300;color: #052C29;margin: 14px;text-align: left;padding-left: 15%;font-size: 16px;}
+body #foundation div#footer .wrap .row a:hover {text-decoration:underline;}
+
+/* grants page */
+#hero-block {min-height:100vh;/* margin-top: -40px; */box-sizing: border-box;display: flex;width: 100%;flex-flow: column;padding: 7% 10%;position: relative;}
+#hero-block .butn {z-index:1;color: #052C29;text-transform: none;padding: 10px 50px;}
+
+a.butn.disabled {
+    background: #c9c9c9;
+    cursor: not-allowed;
+}
+#hero-block p.grants {color: #052c29;z-index:1;margin: 50px 0px;max-width: 900px;}
+#hero-block h1 {font-size:58px;color: #052c29;z-index:1;padding-bottom: 20px;}
+#hero-block h1 span {font-size:58px;color: #052c29;z-index:1;font-style:normal;font-weight:700;}
+#hero-block h2 {font-size:30px;color: #052c29;z-index:1;margin-top:0px;font-weight: 300;}
+#hero-block .background-img {position:absolute;left:0px;width: 100%;bottom: 0px;z-index:0}
+#hero-block.grants .background-img {position:absolute;left: auto;bottom: -10px;right: 0px;z-index:0;text-align: right;max-width: 800px;}
+#hero-block .horizontal-rule {height:1px; z-index:1;margin:24px 5px;background: -moz-linear-gradient(left,  rgba(255,255,255,1) 38%, rgba(255,255,255,0.57) 70%, rgba(255,255,255,0.23) 88%, rgba(0,0,0,0) 100%);background: linear-gradient(to right,  rgba(255,255,255,1) 28%,rgba(255,255,255,0.5) 40%,rgba(255,255,255,0.23) 50%,rgba(0,0,0,0) 70%);}
+#hero-block #inner-blocks {display:flex;justify-content: space-between;z-index:1;margin-top: 100px;max-width: 1500px;flex-flow: wrap;}
+#hero-block #inner-blocks .new-block {display:flex;width: 45%;/* min-width: 300px; */border: 2px solid rgba(223, 244, 231, 0.25);border-radius: 10px;overflow: hidden;}
+#hero-block #inner-blocks .new-block h3 {font-size:30px; font-weight:700; color:#DFF4E7;}
+#hero-block #inner-blocks .new-block h3 span {font-size:30px; font-weight:400; color:#DFF4E7; font-style:italic;}
+#hero-block #inner-blocks .new-block .left {padding: 5% 6%;width: 45%;background: radial-gradient(97.06% 65.94% at 17.13% 40%, #29645F 0%, #09312E 100%);display: flex;align-items: center;}
+#hero-block #inner-blocks .new-block .right {padding: 6%;width: 55%;background:#DFF4E7;display: flex;align-items: center;flex-flow: column;justify-content: space-evenly;position: relative;flex-grow: 1;}
+#hero-block #inner-blocks .new-block .right p {font-size:20px; z-index:1}
+#hero-block #inner-blocks .new-block .butn {text-transform:none;display:flex;align-items: center; z-index:1}
+#hero-block #inner-blocks .new-block .butn i {font-size:75%;padding-left: 5px;}
+#hero-block #inner-blocks .new-block .right .bg {position:absolute;/* top:0px; *//* left:0px; *//* right:0px; *//* bottom:0px; */z-index:0;}
+#hero-block #inner-blocks .new-block .right .bg img {max-width: 130%;}
+#hero-block #inner-blocks a {display:contents;}
+
+/* community page */
+#hero-block.community .background-img {position:absolute;right:0px;width: 85%;bottom: -250px;left: auto;z-index:0}
+#hero-block.community .social-button {transform:scale(1.0);transition:0.3s;position:relative;border-radius:10px;padding: 7% 5%;width: 15%;background: linear-gradient(180deg, #356663 15.91%, #09312E 100%), linear-gradient(180deg, #225450 15.91%, #09312E 100%), #10433F;border: 2px solid rgb(81 120 119);}
+#hero-block.community .social-button:hover {transform:scale(1.1); transition:0.3s;}
+#hero-block.community .social-button .social-inner {position:absolute;top: 10px;left: 10px;right: 10px;bottom: 10px;padding: 5%;display: flex;align-items: center;justify-content: center;border: 1px solid #3A6A66;border-radius: 6px;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);}
+#hero-block.community .social-button .social-inner p {color: #dff4e8;/* font-style:italic; */font-size:30px;text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.55);font-weight: 800;}
+#hero-block.community .social-button .social-inner figure {width: 45%;text-align: center;}
+#hero-block.community #growing {width:100%;text-align:right;padding:5% 0%;z-index:1;padding-right: 20px;}
+#hero-block.community #growing p {color:#dff4e8;font-style:italic;text-transform: capitalize;}
+#hero-block.community #growing p span {font-weight:700;}
+#hero-block h2.smaller {font-size:22px; font-weight:300;}
+
+/* ecosystem page */
+#hero-block.ecosystem #inner-blocks {flex-wrap:wrap;margin-top: 140px;justify-content: space-between;flex-shrink: 1;flex-grow: 0;}
+#hero-block.ecosystem #inner-blocks .new-block {flex-flow: column;width: 32%;margin-bottom: 2.5%;background: #dff4e8;align-self: start;min-height: 250px;border: 2px solid rgb(81 120 119);}
+#hero-block.ecosystem #inner-blocks .new-block.active {align-self: auto;transition: 0.3s;}
+#hero-block.ecosystem #inner-blocks .new-block .left {width:100%;height: 100px;position: relative;}
+#hero-block.ecosystem #inner-blocks .new-block .left figure {width: inherit;aspect-ratio: 1;display: flex;max-width: 100%;max-height: 85%;}
+#hero-block.ecosystem #inner-blocks .new-block .right {width:100%;padding:1% 5%;justify-content: start;flex-grow: 1;justify-content: start;padding-bottom: 0px;}
+#hero-block.ecosystem #inner-blocks ul li {margin:0px;}
+#hero-block.ecosystem #inner-blocks .new-block .right p {font-size:18px;font-weight: 300;color:#10433F}
+#hero-block.ecosystem #inner-blocks .new-block .right p.inner-text {font-weight:300;}
+#hero-block.ecosystem #inner-blocks .new-block .content ul li {font-size:18px;line-height: 25px;font-weight:300;}
+#hero-block.ecosystem #inner-blocks .new-block .arrow {transition:0.3s;font-size:20px;color: #052c29;}
+#hero-block.ecosystem #inner-blocks .new-block .arrow.arrow-animate {transform:rotate(180deg); transition:0.3s;}
+#hero-block.ecosystem #inner-blocks .new-block .right .more {position:absolute;bottom:10px;width: 100%;text-align: center;cursor: pointer;}
+#hero-block.ecosystem .background-img {position:absolute;left: auto;bottom: -10px;right: 0px;z-index:0;text-align: right;max-width: 950px;}
+
+/* developers */
+#hero-block.community.developers .background-img {position:absolute; right:auto; left:0px;width: 100%;bottom: 0px;z-index:0}
+#hero-block #inner-blocks a.developers {display:contents;}
+#hero-block.community  a.developers .social-button {width: 23.5%;overflow: hidden;min-height: 280px;padding: 0px;display: flex;align-self: stretch;}
+body .butn.developers {margin-top:20px;}
+#hero-block.developers .social-button {background:#dff4e8;border: 2px solid rgb(81 120 119);}
+#hero-block.developers .social-button .social-inner {box-shadow: none;flex-flow: column;padding: 0px;left: 0px;top: 0px;right: 0px;bottom: 0px;background: #dff4e9;justify-content: space-between;overflow: hidden;position: relative;flex-grow: 1;display: flex;align-self: stretch;}
+#hero-block.developers .social-button .social-inner p {width:100%;display:block;background: linear-gradient(180deg, #225450 15.91%, #09312E 100%), #10433F;padding: 20px 10px;margin-top: 0px;color:#E1F51F;text-align: center;font-weight: 500;}
+#hero-block.developers .social-button .social-inner p.coming {margin-bottom:0px;font-size: 16px;text-transform: uppercase;font-style: normal;font-weight: 500;padding: 10px 10px;}
+#hero-block.developers .social-button .social-inner p.normal {font-size: 18px;font-style:normal;font-weight:300;color:#062c29;background:transparent;margin-bottom: 10px;text-shadow: none;text-align: left;}
+#hero-block.developers .social-button .social-inner figure {width:auto;height: 65px;display: flex;align-self: center;text-align: center;}
+#hero-block.developers .social-button .social-inner figure img {max-width: 100%;}
+
+/**
+* Tooltip Styles
+*/
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #052C29;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #052C29;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+@media screen and (max-width: 1500px) {
+  #hero-block #inner-blocks .new-block .right .bg img {max-width: 185%;}
+/* font resizing */
+  h1 {font-size: 40px;}
+  body #foundation #topbox .text p {font-size:22px;}
+  body #foundation #topbox {max-height:810px}
+  body #foundation #safe .secure .secure-text {min-width:90%}
+  body #foundation div#building {/* padding-bottom:10%; */}
+  .bg-video, #player {width:1400px;min-height:950px;top: -10%;}
+  body #foundation #topbox div.socials {bottom:40px}
+  
+
+}
+@media screen and (max-width: 1340px) {
+.bg-video, #player {width: 1500px;min-height: 985px;position: absolute;top: -10%;}
+}
+@media screen and (max-width: 1200px) {
+  body #foundation #safe .secure .secure-text figure img {right:10%; left:auto;}
+  body #foundation #topbox div.socials {margin-top:30px}
+  body #foundation #topbox div.socials {}
+  body #foundation #topbox div.audit {justify-content:flex-start;}
+  body #foundation #topbox div.socials {
+    bottom: 40px;
+}
+  body #foundation #topbox div.socials div.socials {width: 100%;}
+  body #foundation #topbox div.socials div.socials a {display:flex; width:90px}
+  body #foundation #topbox div.socials figure {padding: 7px;height: 36px;width: 40px;}
+  body #foundation #topbox div.phone {right: 10%;width: 30%;}
+  body #foundation div#footer .wrap .row.social {display:none;}
+  body #foundation div#footer .wrap .row h4,  body #foundation div#footer .wrap .row a p {padding-left:0px;}
+#hero-block h1 {font-size:50px;}
+#hero-block.ecosystem #inner-blocks{width: 120%;margin-left: -10%;}
+  #hero-block.community a.developers .social-button {width:45%; margin-bottom:40px}
+}
+@media screen and (max-width: 1000px) {
+/* hide smaller screen for now */
+/* body #foundation {display:none} */
+/* body:before {font-size:30px;text-align:center;height: 50vh;width:100%;content:'Responsive page under 1000px width hasn\'t been built yet.';display:inline-block;transform: translateY(100%);} */
+/* end hide */
+  body #foundation div#footer .wrap .row h4, body #foundation div#footer .wrap .row #accordion-1 .head p {font-size:16px}
+  h1 {font-size:32px}
+  body #foundation #topbox div.text {padding-top:20px;}
+  body #foundation #safe .numbers .number p, body #foundation #safe .secure .secure-text .right p {font-size:16px;}
+  body #foundation h3.safe {font-size:30px;}
+  body .butn {font-size:18px}
+  body #foundation #safe .jbe .container div h4 {font-size: 22px;}
+  body #foundation #topbox .text p {padding-bottom: 7px;}
+  body #foundation div#footer .wrap{width:100%;}
+  body #foundation div#footer .wrap .row {display:none;}
+  body #foundation div#footer .wrap .row h4,body #foundation div#footer .wrap .row a p, body #foundation div#footer .wrap .row a p, body #foundation div#footer .wrap .row #accordion-1 .head p {padding-left:5%;}
+  body #foundation div#footer .wrap .row.social {display:none;}
+  body #foundation div#footer .wrap .row {width:25%;}
+  body #foundation div#footer .wrap{justify-content: space-between;}
+  body #foundation div#footer .wrap .row.mobile {display:flex;flex-flow: column;flex-grow: 1;flex-shrink: 0;width: 50%;}
+  body #foundation div#footer .wrap .row #accordion-1 .head {padding: 0px; border-bottom: 0px; /* justify-content: space-between; */ width: 100%;}
+  body #foundation div#footer .wrap .row .accordion.container {width:100%;}
+  #accordion-1 .head figure {display: flex;height: auto;width: 16px;margin-top: -2px;}
+  #accordion-1 .active figure img {transform: rotate(180deg);}
+  body #foundation div#footer .wrap .row #accordion-1 .head p {font-weight:300}
+  body #foundation div#footer #accordion-1 .content a p {font-size: min(max(12px, 3vw), 16px);font-weight: 200;width: 100%;}
+  #accordion-1 .content {width:100%;}
+  #accordion-1 .content a {width:100%}
+  body #foundation div#footer .wrap {width:100%}
+  body #foundation div#offset h3.offset, body #foundation div#offset h3.offset span{font-size:40px;}
+#hero-block.ecosystem #inner-blocks {flex-flow:column;align-self: center;width: 75%;margin-left: 0px;}
+#hero-block.ecosystem #inner-blocks .new-block {width:100%; margin-bottom:40px}
+  #hero-block {padding-top:80px;min-height: 100vh;justify-content: center;}
+    figure.scroll-logo {right:5%;}
+}
+@media screen and (max-width: 799px) {
+  body #foundation #staking .wrapper {width:80%}
+}
+@media screen and (max-width: 750px) {
+  body #foundation #safe .numbers {flex-wrap:wrap;margin-top: 60px;}
+  body #foundation #safe .numbers .number {width:50%; margin-top:50px}
+  body #foundation #topbox div.text {width:70%}
+  body #foundation #safe .secure .secure-text figure img {right:0%}
+  body #foundation #safe .secure .secure-text .right {width:90%;}
+  body #foundation #topbox figure.logo-bg img {height: 800px;width: 800px;aspect-ratio: 1;max-width: unset;max-height: unset;}
+body #foundation #topbox .text h1 {font-size:35px;}
+  body #foundation #topbox .text p {
+    font-size: 18px;
+    line-height: 24px;
+}
+  body #foundation .logo h3, #hero-block h2 {font-size:22px; line-height:24px}
+  body #foundation div.logo figure {width:40px;}
+  body #foundation #fast h2, #hero-block h1 {font-size:35px;}
+  body #foundation #fast p {font-size:16px; padding:0% 5%}
+  body .butn {font-size:16px}
+  #hero-block.ecosystem #inner-blocks {margin-top:60px}
+  #hero-block #inner-blocks {flex-flow:column;align-items: center;}
+  #hero-block.community a.developers .social-button {width:75%;margin-bottom: 40px;height: fit-content;}
+  #hero-block #inner-blocks {margin-top:60px}
+    #hero-block.community #inner-blocks {flex-flow:row;align-items: center;flex-wrap:wrap;justify-content: center;}
+  #hero-block.ecosystem #inner-blocks .new-block .right p {font-size:16px;}
+  #hero-block.developers .social-button .social-inner p.normal {font-size:16px;}
+  #hero-block.community .social-button {width: 34%;margin-bottom:2%;margin-right: 2%;height: 100px;}
+  #hero-block.community .social-button .social-inner figure {width:30%;text-align: center;justify-content: center;}
+  #hero-block p.grants {font-size:16px;}
+  figure.scroll-logo {right:2%;}
+}
+@media screen and (max-width: 600px) {
+  body #foundation #safe .numbers {margin-top:20px}
+  body #foundation #topbox div.phone {position:relative;bottom: auto;left: auto;right: auto;width: 100%;text-align:center;display:inline-block;}
+  body #foundation #topbox div.phone figure {width: 300px;margin: 0 auto;}
+  body #foundation #safe {margin-top: 270px;}
+  body #foundation #topbox div.text {width: 80%;}
+  body #foundation #safe .jbe .container {flex-wrap:wrap;}
+  body #foundation #safe .jbe .container div p {padding:0px}
+  body #foundation #safe .jbe .container div {width:70%;padding-bottom: 40px;}
+  body #foundation #topbox .text p {max-width: 80%;}
+  
+  body #foundation #safe .secure .secure-text figure {width:0%;}
+  body #foundation #safe .secure .secure-text .right {width:100%; padding-left:40px;}
+  body #foundation #safe .secure .secure-text {width:90%;}
+  body #foundation div#footer .wrap .row a.button {font-size:16px;}
+  body #foundation #topbox div.login span, body .login .butn.coming {font-size: 16px;}
+  body #foundation #topbox #contents {padding:5% 4%;}
+  body #foundation #safe .secure .secure-text .right h3 {margin-top:40px}
+  body #foundation #safe .secure .secure-text .right {margin-bottom:30px;}
+  body #foundation #topbox div.socials {bottom: 10px;right:0px;display: block;margin-top:0px;}
+  body #foundation #safe .jbe {padding-bottom: 0px;}
+  body #foundation #topbox .ticker {margin-bottom:80px}
+  body #foundation #topbox div.socials div.socials {left:5%;}
+}
+
+@media screen and (max-width: 500px) {
+  body #foundation #topbox div.logo, body #foundation #topbox div.login {height: 40px;}
+  body #foundation #topbox .logo h3 {font-size: 20px;line-height:110%}
+  body #foundation #topbox h1 {font-size: 26px;}
+  body #foundation #topbox .text p, body #foundation #safe .jbe .container div h4 {font-size: 16px;line-height: 24px;}
+  body #foundation #safe .numbers {margin-top:0px;}
+  body #foundation #safe .secure .secure-text .right h3, body #foundation h3.safe, body #foundation #staking h3, body #foundation #safe .numbers .number p span {font-size: 22px;}
+  body #foundation #safe .numbers .number p, body #foundation #safe .secure .secure-text .right p, body #foundation #safe .jbe .container div p, body #foundation #staking p, body #foundation #staking .stake-calc p.titles, body #foundation div#footer .wrap .row #accordion-1 .head p {font-size: 14px;}
+  body #foundation div#footer .wrap {flex-flow:column;}
+  body #foundation div#footer .wrap.row{width:100%;flex-basis:100%}
+  #hero-block.community a.developers .social-button {min-height:300px;}
+  #hero-block.ecosystem #inner-blocks .new-block .left figure {}
+}   
