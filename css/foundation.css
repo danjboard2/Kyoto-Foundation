@@ -124,7 +124,7 @@ figure.scroll-logo {
     align-items: center;
     padding-top: 80px;
 }
-figure.scroll-logo img {height: fit-content;}
+figure.scroll-logo img {}
 
 body #foundation {
   max-width: 3000px;
@@ -429,6 +429,7 @@ body #foundation #topbox div.socials {
   z-index: 2;
   position: relative;
   margin-top: -40px;
+  margin-bottom: 20px;
 }
 
 body #foundation #topbox div.socials div.socials {
@@ -1004,7 +1005,9 @@ body .butn.developers {margin-top:20px;}
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-
+@media screen and (min-width: 1500px) {
+body #foundation #topbox #contents {max-height:none;}
+}
 @media screen and (max-width: 1500px) {
   #hero-block #inner-blocks .new-block .right .bg img {max-width: 185%;}
 /* font resizing */
@@ -1019,7 +1022,7 @@ body .butn.developers {margin-top:20px;}
 
 }
 @media screen and (max-width: 1340px) {
-.bg-video, #player {width: 1500px;min-height: 985px;position: absolute;top: -10%;}
+.bg-video, #player {width: 1600px;min-height: 1020px;position: absolute;top: -10%;}
 }
 @media screen and (max-width: 1200px) {
   body #foundation #safe .secure .secure-text figure img {right:10%; left:auto;}

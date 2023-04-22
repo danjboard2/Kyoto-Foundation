@@ -163,11 +163,11 @@ body {
 }
 @media screen and (max-width: 500px) {
   
-.philosophie .point {flex-flow:column;justify-content: center;padding: 3rem;padding-right: 1rem;padding-top: 0rem;}
+.philosophie .point {flex-flow:column;justify-content: top;padding:2rem;padding-top: 5rem;}
 .point article {flex-basis: 60%;}
-  .indicators {margin-top: 23vh;left: 20px;}
+  .indicators {margin-top: 13vh;left:10px;}
   .point img {margin-right: 5rem;}
-  figure.scroll-logo {bottom:0px;top: auto;height: 40%;width: 100%;justify-content: space-around;left: 0px;}
+  figure.scroll-logo {bottom: 50px;top: auto;height: 40%;width: 100%;justify-content: space-around;left: 0px;padding-top: 0px;}
 figure.scroll-logo img  {}
 }
 @media screen and ( max-height: 780px ) {
