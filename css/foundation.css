@@ -1047,7 +1047,7 @@ body #foundation #topbox #contents {max-height:none;}
 /* body #foundation {display:none} */
 /* body:before {font-size:30px;text-align:center;height: 50vh;width:100%;content:'Responsive page under 1000px width hasn\'t been built yet.';display:inline-block;transform: translateY(100%);} */
 /* end hide */
-  body #foundation div#footer .wrap .row h4, body #foundation div#footer .wrap .row #accordion-1 .head p {font-size:16px}
+  body #foundation div#footer .wrap .row h4, body #foundation div#footer .wrap .row #accordion-1 .head p {font-size:16px;font-weight: bold;}
   h1 {font-size:32px}
   body #foundation #topbox div.text {padding-top:20px;}
   body #foundation #safe .numbers .number p, body #foundation #safe .secure .secure-text .right p {font-size:16px;}
@@ -1056,10 +1056,10 @@ body #foundation #topbox #contents {max-height:none;}
   body #foundation #safe .jbe .container div h4 {font-size: 22px;}
   body #foundation #topbox .text p {padding-bottom: 7px;}
   body #foundation div#footer .wrap{width:100%;}
-  body #foundation div#footer .wrap .row {display:none;}
+  body #foundation div#footer .wrap .row {/* display:none; */}
   body #foundation div#footer .wrap .row h4,body #foundation div#footer .wrap .row a p, body #foundation div#footer .wrap .row a p, body #foundation div#footer .wrap .row #accordion-1 .head p {padding-left:5%;}
   body #foundation div#footer .wrap .row.social {display:none;}
-  body #foundation div#footer .wrap .row {width:25%;}
+  body #foundation div#footer .wrap .row {width: 100%;}
   body #foundation div#footer .wrap{justify-content: space-between;}
   body #foundation div#footer .wrap .row.mobile {display:flex;flex-flow: column;flex-grow: 1;flex-shrink: 0;width: 50%;}
   body #foundation div#footer .wrap .row #accordion-1 .head {padding: 0px; border-bottom: 0px; /* justify-content: space-between; */ width: 100%;}
