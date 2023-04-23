@@ -417,7 +417,7 @@ body #foundation #topbox div.text {
   flex-flow: column;
   margin-left: 10%;
 }
-body #foundation #topbox .ticker {display:flex;flex-flow:column;width: 190px;position: absolute;bottom: 12px;left: 5%;align-items: center;}
+body #foundation #topbox .ticker {display:flex;flex-flow:column;width: 190px;position: absolute;bottom: 12px;left: 5%;align-items: left;}
 body #foundation #topbox .ticker .inner-ticker {background:#fff;border-radius: 5px;padding: 5px;border: 1px solid #000000cf;box-shadow: inset 0px 0px 6px 2px #221b1b, 3px 2px 4px 0px #00000080;}
 body #foundation #topbox .ticker h4 {color:#e1f547;font-size: 18px;text-shadow: 1px 2px 6px #000000, 1px 2px 6px #000000;}
 body #foundation #topbox .ticker .inner-ticker p {margin:0px;font-family:'Digital Numbers';text-align:right;padding: 2px;}
@@ -1125,7 +1125,7 @@ body #foundation #topbox .text h1 {font-size:35px;}
   body #foundation #safe .secure .secure-text {width:90%;}
   body #foundation div#footer .wrap .row a.button {font-size:16px;}
   body #foundation #topbox div.login span, body .login .butn.coming {font-size: 16px;}
-  body #foundation #topbox #contents {padding:5% 4%;}
+  body #foundation #topbox #contents {/* padding:5% 4%; */}
   body #foundation #safe .secure .secure-text .right h3 {margin-top:40px}
   body #foundation #safe .secure .secure-text .right {margin-bottom:30px;}
   body #foundation #topbox div.socials {bottom: 10px;right:0px;display: block;margin-top:0px;}
