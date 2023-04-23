@@ -8,10 +8,10 @@
 	<meta name="author"	content="Daniel Board" />
 	<title>Kyoto Protocol</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="css/accordion.css" type="text/css">
-	<link rel="stylesheet" href="css/foundation.css" type="text/css">
+	<link rel="stylesheet" href="css/accordion.css?v=6" type="text/css">
+	<link rel="stylesheet" href="css/foundation.css?v=6" type="text/css">
 	<link href="custom.css" rel="stylesheet">
-	<link rel="stylesheet" href="./scroll-style.css?v=2">
+	<link rel="stylesheet" href="./scroll-style.css?v=6">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  <!-- cdn-js -->
  <link rel="stylesheet" href="lightbox/dist/basicLightbox.min.css">
@@ -22,10 +22,17 @@
  <link rel="stylesheet" href="css/menu.css" type="text/css">
  <script>
 	$( document ).ready(function() {
+		$(document).on('click', 'a[href^="#"]', function (event) { //smooth scroll
+    event.preventDefault();
 
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
 $(document).on('click','.js-menu_toggle.closed',function(e){
 e.preventDefault(); $('.list_load, .list_item').stop();
 $(this).removeClass('closed').addClass('opened');
+$('.side_menu .container .socials').css({ 'display':'flex' });
 
 $('.side_menu').css({ 'right':'0px' });
 $('#background-blur').css({ 'right':'0px' });
@@ -47,6 +54,7 @@ $(this).removeClass('opened').addClass('closed');
 
 $('.side_menu').css({ 'right':'-300px' });
 $('#background-blur').css({ 'right':'-300px' });
+$('.side_menu .container .socials').css({ 'display':'none' });
 
 var count = $('.list_item').length;
 $('.list_item').css({
@@ -71,6 +79,11 @@ ScrollTrigger.create({
   //onToggle: self => console.log("toggled, isActive:", self.isActive),
   //onUpdate: self => { console.log("progress:", self.progress.toFixed(3), "direction:", self.direction, "velocity", self.getVelocity());}
 });
+				$('.head').click(function(){
+					$(this).toggleClass('active');
+					$(this).parent().find('.arrow').toggleClass('arrow-animate');
+					$(this).parent().find('.content').slideToggle(280);
+				});
 });
 </script>
 </head>
@@ -117,7 +130,7 @@ ScrollTrigger.create({
 					<p>$0.33</p>
 				</div>
 				<div class="menu-icon-container">
-					<a href="#" class="menu-icon js-menu_toggle closed">				
+					<a href="" class="menu-icon js-menu_toggle closed">				
 						<span class="menu-icon_box">
 							<span class="menu-icon_line menu-icon_line--1"></span>
 							<span class="menu-icon_line menu-icon_line--2"></span>
@@ -134,8 +147,8 @@ ScrollTrigger.create({
 			<div class="container">
 				<h2 class="menu_title">MENU</h2>
 				<ul class="list_load">
-					<li class="list_item"><a href="/ecosystem/">Ecosystem</a></li>
-					<li class="list_item"><a href="/developers/">Developers</a>
+					<li class="list_item"><a href="#" class="developers">Ecosystem</a></li>
+					<li class="list_item"><a href="#" class="developers">Developers</a>
 						<!--<ul>
 							<li><a class="developers" href="#">Quick start</a></li>
 							<li><a class="developers" href="#">Documents</a></li>
@@ -143,10 +156,20 @@ ScrollTrigger.create({
 							<li><a class="developers" href="#">Updates</a></li>
 						</ul>-->
 						</li>
-					<li class="list_item"><a href="/community/">Community</a></li>
-					<li class="list_item"><a href="/grants/">Grant Program</a></li>
+					<li class="list_item"><a href="#" class="developers">Grant Program</a></li>
 					<!--<li class="list_item"><a target="_blank" href="https://kyotofoundation.gitbook.io/kyotoprotocol.io/UPzvNshIO8VLZ8DtVZMC/introduction/the-kyoto-blockchain">Green paper</a></li>-->
 				</ul>
+				<div class="socials">
+					<p>Join our community</p>
+					<div class="socials-inner">
+						<a href="https://discord.gg/kyotoprotocol" target="_blank"><figure><img src="images/social/discord.png"></figure></a>
+						<a href="https://twitter.com/official_kpio" target="_blank"><figure><img src="images/social/twitter.png"></figure></a>
+						<a href="https://medium.com/@KyotoProtocol.io" target="_blank"><figure><img src="images/social/medium.png"></figure></a>
+						<a href="https://www.youtube.com/channel/UCIijeBIESm9rnnckEwbU14g" target="_blank"><figure><img src="images/social/youtube.png"></figure></a>
+						<a href="https://t.me/KyotoProtocol" target="_blank"><figure><img src="images/social/telegram.png"></figure></a>
+						<a href="https://www.linkedin.com/company/kyotoprotocol-io/" target="_blank"><figure><img src="images/social/linkedin.png"></figure></a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="background-blur"></div>
@@ -161,13 +184,13 @@ ScrollTrigger.create({
 				<div class="text">
 					<h1>A Carbon Negative Blockchain</h1>
 					<p>Built to scale the Voluntary Carbon Market and regenerative finance harnessing the power of Web3.</p>
-					<a href="https://kyotowallet.io" class="butn" target="_blank"><span>Explore Kyoto Wallet</span></a>
+					<a href="#scroller" class="butn"><span>Learn more</span></a>
 				</div>
 
 				<div class="socials">
 					<div class="ticker">
-						<h4>Total Trees Planted</h4>
-						<div class="inner-ticker"><p>000,020,322</p></div>
+						<h4>Trees planted so far</h4>
+						<div class="inner-ticker"><p>20,322</p></div>
 					</div>
 					<div class="socials">
 						<a href="https://discord.gg/kyotoprotocol" target="_blank"><figure><img src="images/social/discord.png"></figure></a>
@@ -196,8 +219,8 @@ ScrollTrigger.create({
 		</svg>
 </figure><br>
 <h2>Fast. <span>Green.</span> Secure.</h2></div>
-<p>Kyotoprotocol.io is an EVM compatible blockchain. It is fast, scalable, reliable and has low transaction costs.</p>
-<a href="/developers/" class="butn"><span>Build on Kyoto</span></a>
+<p>The Kyoto blockchain is EVM compatible, fast, secure and reliable with low transaction costs.</p>
+<a href="#" class="butn developers"><span>Build on Kyoto</span></a>
 </section>
 <!-- end fast, green secure -->
 
@@ -211,7 +234,7 @@ ScrollTrigger.create({
 		<div class="innerblock four"><h3>ESG</h3><figure><img src="images/esg-icon.png"/></figure><p>Description about this window goes in here. Here is where the information about this window goes. And so on etc etc etc etc etc</p></div>
 		<div class="innerblock five"><h3>ECO Friendly</h3><figure><img src="images/eco-friendly-icon.png"/></figure><p>Description about this window goes in here. Here is where the information about this window goes. And so on etc etc etc etc etc</p></div>
 	</section>-->
-		<section class="philosophie">
+		<section class="philosophie" id="scroller">
 		  <div class="wrapper">
 			<div class="indicators">
 				<div class="indicator"></div>
@@ -227,16 +250,17 @@ ScrollTrigger.create({
 				<article id="three" name="id3">
 				  <h3><b>CARBON NEGATIVE</b>
 		  <br><i>BY DESIGN</i></h3>
-				  <p>We are the first blockchain to use 25% of gas fees from each transaction to offset our blockchain.</p>
+				  <p>The Kyoto blockchain is the first blockchain to contribute 25% of each transactional gas fee to offset carbon emissions via reforestation.</p>
+				  <p>Any user, DeFi protocol or business can passively contribute towards fighting climate change, simply by using the Kyoto Network.</p>
 				</article>
 			  </div>
 			  <div class="point"  id="section4">
 				<article id="four" name="id4">
 				  <h3><b>ReFi.</b>
 		  <br><i>REDEFINED</i></h3>
-				  <p>The Kyoto ecosystem is built from the ground up to maximise the positive impact made by regenerative finance projects.</p>
+				  <p>The Kyoto blockchain is built from the ground up to maximise the positive impact made by regenerative finance projects. </p>
 		  
-		  <p>We act as a force multiplier, amplifying your positive impact through trading fees and volume from building on Kyoto blockchain.</p>
+		  <p>The Kyoto ecosystem is a force multiplier that accelerates the positive impact made, whilst boosting transactional volume & TVL on the Kyoto Blockchain.</p>
 				</article>
 				<figure>
 				</figure>
@@ -244,9 +268,9 @@ ScrollTrigger.create({
 			<div class="point" id="section1">
 			  <article id="one" name="id1">
 				<h3><b>CONSERVATION</b> <br><i>FOCUSED</i></h3>
-				<p>Kyoto Protocol is committed to conservation, positive impact and making a difference in the fight against climate change.</p>
+				<p>We are committed to scaling global conservation, protecting crucial biodiversity and helping make a difference in the fight against climate change.</p>
 		
-		<p>We are active in large scale forest protection and reforestation projects. We help reduce carbon dioxide, protect habitat, safeguard bio diversity and support local economies.</p>
+		<p>We are active in large scale forest protection and reforestation projects. We help reduce green house gas emissions, protect against habitat loss and support developing local economies.</p>
 		
 		<p class="third">These initiatives are funded by the verification and sale of verified emission reductions (carbon credits) on the Kyoto blockchain.</p>
 			  </article>
@@ -257,10 +281,10 @@ ScrollTrigger.create({
 			  <article id="two" name="id2">
 				<h3><b>OFFSET.</b>
 		<br><i>ONCHAIN</i></h3>
-				<p>Blockchain technology improves the current voluntary carbon market by delivering a higher level of transparency to your ESG and offset obligations.</p>
+				<p>Blockchain technology can keep a secure and transparent ledger for the whole supply chain involved in the creation and tokenisation of carbon assets.</p>
+		<p>Mitigating fraud, double counting and creating a more cost effective solution for companies and individuals offsetting in the voluntary carbon market.</p>
 		
-		
-		<p><a href="/developers/" class="butn"><span>Offset with us</span></a></p>
+		<p><a href="https://www.kyotoswap.io/impact" target="_blank" class="butn"><span>Plant trees with us</span></a></p>
 			  </article>
 			  <figure>
 			  </figure>
@@ -278,25 +302,63 @@ ScrollTrigger.create({
 			<div class="row">
 				<h4>About</h4>
 				<!--<a href="https://kyotoswap-io.gitbook.io/kyotoswap/welcome/contact-us"><p>Contact</p></a>-->
-				<a href="/community/"><p>Community</p></a>
+				<a href="#" class="developers"><p>Community</p></a>
+				<a href="#" class="developers"><p>Documentation</p></a>
 			</div>
 			<div class="row">
-				<h4>Buld on Kyoto</h4>
+				<h4>Build on Kyoto</h4>
 				<div class="content">
-					<a href="/grants/"><p>Grant Program</p></a>
+					<a href="#" class="developers"><p>Grant Program</p></a>
 				  </div>
 			</div>
 			<div class="row">
-				<h4>Developers</h4>
-				<a href="/developers/"><p>Documentation</p></a>
+				<h4>Ecosystem</h4>
+				<a href="https://kyotoswap.io" target="_blank"><p>KyotoSwap.io</p></a>
+				<a href="https://kyotowallet.io" target="_blank"><p>KyotoWallet.io</p></a>
 			</div>
-			<div class="row social">				
-				<a href="https://discord.gg/kyotoprotocol" target="_blank"><figure><img src="images/social/discord-footer.png"></figure></a>
-				<a href="https://twitter.com/official_kpio" target="_blank"><figure><img src="images/social/twitter-footer.png"></figure></a>
-			<a href="https://medium.com/@KyotoProtocol.io" target="_blank"><figure><img src="images/social/medium-footer.png"></figure></a>
-			<a href="https://www.youtube.com/channel/UCIijeBIESm9rnnckEwbU14g" target="_blank"><figure><img src="images/social/youtube-footer.png"></figure></a>
-				<a href="https://t.me/KyotoProtocol" target="_blank"><figure><img src="images/social/telegram-footer.png"></figure></a>
-				<a href="https://www.linkedin.com/company/kyotoprotocol-io/" target="_blank"><figure><img src="images/social/linkedin-footer.png"></figure></a>
+			<div class="row mobile">
+				<h4>Menu</h4>
+				<div class="accordion container">
+					<div id="accordion-1">
+					  <div class="head">
+						<p>About <figure><img src="images/chevron-down.png"></figure></p>
+					  </div>
+					  <div class="content">
+						<a href="#" class="developers"><p>Community</p></a>
+						<a href="#"><p>Documentation</p></a>
+					  </div>
+					</div>
+
+					<div id="accordion-1">
+					  <div class="head">
+						<p>Build on Kyoto <figure><img src="images/chevron-down.png"></figure></p>
+					  </div>
+					  <div class="content">
+						<a href="#" class="developers"><p>Grant Program</p></a>
+					  </div>
+					</div>							
+
+					<div id="accordion-1">
+						<div class="head">
+						 <p>Ecosystem <figure><img src="images/chevron-down.png"></figure></p>
+						</div>
+						<div class="content">
+							<a href="https://kyotoswap.io" target="_blank"><p>KyotoSwap.io</p></a>
+							<a href="https://kyotowallet.io" target="_blank"><p>KyotoWallet.io</p></a>
+						</div>
+					  </div>	
+				</div>
+			</div>
+			<div class="row social">
+				<p>Join our community</p>
+				<div class="social-inner">
+					<a href="https://discord.gg/kyotoprotocol" target="_blank"><figure><img src="images/social/discord-footer.png"></figure></a>
+					<a href="https://twitter.com/official_kpio" target="_blank"><figure><img src="images/social/twitter-footer.png"></figure></a>
+					<a href="https://medium.com/@KyotoProtocol.io" target="_blank"><figure><img src="images/social/medium-footer.png"></figure></a>
+					<a href="https://www.youtube.com/channel/UCIijeBIESm9rnnckEwbU14g" target="_blank"><figure><img src="images/social/youtube-footer.png"></figure></a>
+					<a href="https://t.me/KyotoProtocol" target="_blank"><figure><img src="images/social/telegram-footer.png"></figure></a>
+					<a href="https://www.linkedin.com/company/kyotoprotocol-io/" target="_blank"><figure><img src="images/social/linkedin-footer.png"></figure></a>
+				</div>
 			</div>
 		</div>
 		<div id="copyright">2023 &copy; KYOTOPROTOCOL.IO</div>
@@ -315,8 +377,7 @@ $("a.developers").click(function() {
 						<path d="M7.94798 49.9998C12.3375 49.9998 15.896 46.2473 15.896 41.6183C15.896 36.9893 12.3375 33.2368 7.94798 33.2368C3.55843 33.2368 0 36.9893 0 41.6183C0 46.2473 3.55843 49.9998 7.94798 49.9998Z" fill="#DFF4E7" style="fill: rgb(223 244 231);color: rgb(223 244 231);"></path>
 						</svg>
         <p>
-            <strong>Developers Page</strong><br>
-            Coming Soon
+            <strong>Coming Soon</strong><br>
         </p>
     </div>
 			`).show();

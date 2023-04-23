@@ -284,18 +284,16 @@ body #foundation #topbox {background-image: url('../images/topbox-hero.jpg');pos
 
 body #foundation #topbox #contents {
   overflow: hidden;
-  padding: 4% 8%;
-  padding-top: 3.5%;
   /* position: relative; */
   padding-left: 0%;
+  padding-top: 5%;
   padding-bottom: 0px;
-  min-height: 800px;
-  height: 100vh;
-  max-height: 830px;
+  height: 95%;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  justify-content: space-around;
   /* visibility: hidden; */
+  width: 98%;
 }
 
 body #foundation #logo-login {
@@ -341,7 +339,7 @@ body #foundation div.logo figure {
 body #foundation #topbox h1 {
   color: #dff4e7;
   font-size: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   text-shadow: 1px 2px 6px #000000,  1px 2px 6px #000000;
 }
 
@@ -364,7 +362,7 @@ body .butn {
   display: flex;
   width: fit-content;
 }
-body .butn span {display:flex;align-items:Center;margin-bottom: 0px;color: #052C29;}
+body .butn span {display:flex;align-items:Center;margin-bottom: 1px;color: #052C29;}
 body .butn.coming {background:#bcbec0;transition:0.3s;display: inline-block;text-align: center;}
 body .login .butn.coming {
   color:#daf5e6;
@@ -380,9 +378,11 @@ body #foundation #topbox .text p {
   font-size: 30px;
   line-height: 40px;
   max-width: 65%;
-  padding-bottom: 36px;
+  padding-bottom: 0px;
   font-weight: 300;
   text-shadow: 1px 2px 4px rgb(0 0 0), 3px 0px 4px #000000, -4px -1px 4px #000000, 3px 0px 4px #000000;
+  margin: 10px 0px;
+  margin-bottom: 20px;
 }
 
 body #foundation #topbox div.login {
@@ -409,33 +409,31 @@ body #foundation #topbox div.login span {
 body #foundation #topbox div.text {
   width: 60%;
   min-width: 30%;
-  padding-top: 20px;
   z-index: 3;
   position: relative;
-  padding-bottom: 6%;
   display: flex;
   flex-flow: column;
   margin-left: 10%;
 }
-body #foundation #topbox .ticker {display:flex;flex-flow:column;width: 190px;position: absolute;bottom: 12px;left: 5%;align-items: left;}
-body #foundation #topbox .ticker .inner-ticker {background:#fff;border-radius: 5px;padding: 5px;border: 1px solid #000000cf;box-shadow: inset 0px 0px 6px 2px #221b1b, 3px 2px 4px 0px #00000080;}
-body #foundation #topbox .ticker h4 {color:#e1f547;font-size: 18px;text-shadow: 1px 2px 6px #000000, 1px 2px 6px #000000;}
+body #foundation #topbox .ticker {display:flex;flex-flow: column;bottom: 12px;left: 5%;align-items: center;width: 270px;}
+body #foundation #topbox .ticker .inner-ticker {background: #fff;border-radius: 5px;padding: 5px;border: 1px solid #000000cf;box-shadow: inset 0px 0px 6px 2px #221b1b, 3px 2px 4px 0px #00000080;}
+body #foundation #topbox .ticker h4 {color:#e1f547;font-size: 18px;text-shadow: 1px 2px 6px #000000, 1px 2px 6px #000000;margin-bottom: 16px;text-transform: uppercase;}
 body #foundation #topbox .ticker .inner-ticker p {margin:0px;font-family:'Digital Numbers';text-align:right;padding: 2px;}
 body #foundation #topbox div.socials {
   display: flex;
   flex-flow: column;
-  width: 100%;
+  width: 93%;
   align-items: flex-end;
   z-index: 2;
   position: relative;
-  margin-top: -40px;
-  margin-bottom: 20px;
+  justify-content: flex-end;
 }
 
 body #foundation #topbox div.socials div.socials {
   display: flex;
   flex-flow: row;
   max-width: 270px;
+  margin-top: 12px;
 }
 
 body #foundation #topbox div.socials div.socials a:last-of-type figure {
@@ -556,11 +554,14 @@ body #foundation #safe .secure .secure-text {
 /* Fast, green, secure */
 body #foundation #fast {display:inline-block;width:100%;text-align:center;padding: 180px 0px;padding-bottom: 0px;}
 body #foundation #fast .butn {margin:0 auto; margin-top:40px}
+body #foundation #fast .butn:hover {background:#d7d7d7}
+body #foundation #fast .butn:hover span {display:none}
+body #foundation #fast .butn:hover:after {content:'Launching soon'; color:#062c29}
 body #foundation #fast .slogan {display:flex;justify-content: center;align-items: center;flex-flow: column;}
-body #foundation #fast .slogan figure {margin-bottom:40px;}
-body #foundation #fast h2 {text-transform: uppercase;font-size: 50px;margin-left: 20px;font-weight: 700;color: #052c29;}
+body #foundation #fast .slogan figure {margin-bottom: 0px;}
+body #foundation #fast h2 {text-transform: uppercase;font-size: 35px;margin-left: 20px;font-weight: 500;color: #052c29;}
 body #foundation #fast h2 span {color:#2D6A65;font-style: italic;}
-body #foundation #fast p {font-size:25px;font-weight:500;max-width: 700px;margin: 0 auto;margin-top: 20px;color: #052c29;}
+body #foundation #fast p {font-size: 22px;font-weight:500;max-width: 700px;margin: 0 auto;margin-top: 0px;color: #052c29;}
 
 /* Eco Blocks */
 body #foundation #eco-blocks {position:relative;overflow:hidden;display:flex;width:100%;justify-content: space-between;padding: 120px 6.5%;background: #225450;background: -moz-radial-gradient(center, ellipse cover,  #225450 40%, #09312e 100%);background: -webkit-radial-gradient(center, ellipse cover,  #225450 40%,#09312e 100%);background: radial-gradient(ellipse at center,  #225450 40%,#09312e 100%);}
@@ -857,17 +858,19 @@ body #foundation div#footer .wrap .row a p {font-size: min(max(12px, 3vw), 18px)
 body #foundation div#footer {display:flex;align-content:center;justify-content:center;flex-flow: column;flex-wrap: wrap;width: 100%;}
 body #foundation div#footer #copyright {margin-top: 60px;margin-bottom: 60px;text-align: center;}
 body #foundation div#footer .wrap {display:flex;width:80%;border: 2px solid #052C29;border-left:none;border-right:none;padding:10px 0px;text-transform:uppercase;color:#052C29;z-index: 1;}
-body #foundation div#footer .wrap .row {width: 20%;flex-grow: 1;display: block;}
-body #foundation div#footer .wrap .row a {text-decoration:none;width: 50px;}
+body #foundation div#footer .wrap .row {width: 20%;flex-grow: 1;display: flex;flex-flow: column;}
+body #foundation div#footer .wrap .row a {text-decoration:none;display: flex;}
 body #foundation div#footer .wrap .row.mobile {display:none}
-body #foundation div#footer .wrap .row.left {justify-content:space-between;display: flex;flex-flow: column;padding: 1%;align-items: center;font-weight: 100;width: auto;flex-grow: 0;}
-body #foundation div#footer .wrap .row.left figure {text-align:center;}
-body #foundation div#footer .wrap .row.left figure img {max-width: 190px;}
-body #foundation div#footer .wrap .row.social {display:flex;/* justify-content: right; */align-items: center;align-self: end;width: 300px;height: 40px;}
-body #foundation div#footer .wrap .row.social figure {height: 100%;padding-bottom: 3%;width: 75%;padding: 15%;margin-right: 0px;}
+body #foundation div#footer .wrap .row.left {justify-content:space-between;display: flex;flex-flow: column;padding: 1%;align-items: center;font-weight: 100;flex-grow: 0;flex-shrink: 1;width: 18%;}
+body #foundation div#footer .wrap .row.left figure {text-align:center;width: 100%;}
+body #foundation div#footer .wrap .row.left figure img {max-width: 190px;width: 100%;}
+body #foundation div#footer .wrap .row.social {display:flex;align-items: flex-end;align-self: end;width: 180px;flex-flow: column;}
+body #foundation div#footer .wrap .row.social p {font-size: 14px;border-bottom:1px solid #062926;width: 200px;color: #052624;padding-bottom: 6px;padding-left: 5px;margin-bottom: 10px;font-weight: 300;}
+body #foundation div#footer .wrap .row .social-inner {display:flex;align-items: center;align-self: end;width: 200px;flex-flow: row;margin-bottom: 40px;}
+body #foundation div#footer .wrap .row.social figure {height: 100%;padding-bottom: 3%;width: 75%;padding: 10%;margin-right: 0px;display: flex;}
 body #foundation div#footer .wrap .row a.button {background: #e2f51e;padding: 6px 5px;padding-top: 9px;border-radius:30px;font-size: 18px;font-weight:500;color:#052C29;/* border:1px solid #052C29; */width: 70%;text-align: center;margin-top: 20px;margin-bottom: 10px;}
-body #foundation div#footer .wrap .row h4, body #foundation div#footer .wrap .row #accordion-1 .head p {font-size: 20px;font-weight:500;margin: 14px;text-align: left;padding-left: 15%;}
-body #foundation div#footer .wrap .row a p {font-weight:300;color: #052C29;margin: 14px;text-align: left;padding-left: 15%;font-size: 16px;}
+body #foundation div#footer .wrap .row h4, body #foundation div#footer .wrap .row #accordion-1 .head p {font-size: 20px;font-weight:500;margin: 14px;text-align: left;/* padding-left: 15%; */display: flex;}
+body #foundation div#footer .wrap .row a p {font-weight:300;color: #052C29;margin: 14px;text-align: left;font-size: 16px;}
 body #foundation div#footer .wrap .row a:hover {text-decoration:underline;}
 
 /* grants page */
@@ -1006,18 +1009,18 @@ body .butn.developers {margin-top:20px;}
   opacity: 1;
 }
 @media screen and (min-width: 1500px) {
-body #foundation #topbox #contents {max-height:none;}
+body #foundation #topbox #contents {max-height: 100%;}
 }
 @media screen and (max-width: 1500px) {
   #hero-block #inner-blocks .new-block .right .bg img {max-width: 185%;}
 /* font resizing */
   h1 {font-size: 40px;}
-  body #foundation #topbox .text p {font-size:22px;}
+  body #foundation #topbox .text p {font-size:22px;line-height: 26px;}
   body #foundation #topbox {max-height:810px}
   body #foundation #safe .secure .secure-text {min-width:90%}
   body #foundation div#building {/* padding-bottom:10%; */}
   .bg-video, #player {width:1400px;min-height:950px;top: -10%;}
-  body #foundation #topbox div.socials {bottom:40px}
+  body #foundation #topbox div.socials {}
   
 
 }
@@ -1030,12 +1033,12 @@ body #foundation #topbox #contents {max-height:none;}
   body #foundation #topbox div.socials {}
   body #foundation #topbox div.audit {justify-content:flex-start;}
   body #foundation #topbox div.socials {
-    bottom: 40px;
 }
   body #foundation #topbox div.socials div.socials {width: 100%;}
   body #foundation #topbox div.socials div.socials a {display:flex; width:90px}
   body #foundation #topbox div.socials figure {padding: 7px;height: 36px;width: 40px;}
   body #foundation #topbox div.phone {right: 10%;width: 30%;}
+    body #foundation div#footer {margin-top:60px;}
   body #foundation div#footer .wrap .row.social {display:none;}
   body #foundation div#footer .wrap .row h4,  body #foundation div#footer .wrap .row a p {padding-left:0px;}
 #hero-block h1 {font-size:50px;}
@@ -1047,7 +1050,7 @@ body #foundation #topbox #contents {max-height:none;}
 /* body #foundation {display:none} */
 /* body:before {font-size:30px;text-align:center;height: 50vh;width:100%;content:'Responsive page under 1000px width hasn\'t been built yet.';display:inline-block;transform: translateY(100%);} */
 /* end hide */
-  body #foundation div#footer .wrap .row h4, body #foundation div#footer .wrap .row #accordion-1 .head p {font-size:16px;font-weight: bold;}
+  body #foundation div#footer .wrap .row h4, body #foundation div#footer .wrap .row #accordion-1 .head p {font-size:16px}
   h1 {font-size:32px}
   body #foundation #topbox div.text {padding-top:20px;}
   body #foundation #safe .numbers .number p, body #foundation #safe .secure .secure-text .right p {font-size:16px;}
@@ -1059,15 +1062,15 @@ body #foundation #topbox #contents {max-height:none;}
   body #foundation div#footer .wrap .row {/* display:none; */}
   body #foundation div#footer .wrap .row h4,body #foundation div#footer .wrap .row a p, body #foundation div#footer .wrap .row a p, body #foundation div#footer .wrap .row #accordion-1 .head p {padding-left:5%;}
   body #foundation div#footer .wrap .row.social {display:none;}
-  body #foundation div#footer .wrap .row {width: 100%;}
-  body #foundation div#footer .wrap{justify-content: space-between;flex-flow: column;}
-  body #foundation div#footer .wrap .row.mobile {display:flex;flex-flow: column;flex-grow: 1;flex-shrink: 0;width: 50%;}
-  body #foundation div#footer .wrap .row #accordion-1 .head {padding: 0px; border-bottom: 0px; /* justify-content: space-between; */ width: 100%;}
-  body #foundation div#footer .wrap .row .accordion.container {width:100%;}
+  body #foundation div#footer .wrap .row {width: 100%;display: none;}
+  body #foundation div#footer .wrap{justify-content: space-between;flex-wrap: wrap;}
+  body #foundation div#footer .wrap .row.mobile {display:flex;flex-flow: column;flex-grow: 1;flex-shrink: 0;width: 100%;}
+  body #foundation div#footer .wrap .row #accordion-1 .head {padding: 0px;border-bottom: 0px;/* justify-content: space-between; */width: 100%;}
+  body #foundation div#footer .wrap .row .accordion.container {width:100%;flex-flow: column;align-items: flex-start;height: auto;min-height: auto;}
   #accordion-1 .head figure {display: flex;height: auto;width: 16px;margin-top: -2px;}
   #accordion-1 .active figure img {transform: rotate(180deg);}
   body #foundation div#footer .wrap .row #accordion-1 .head p {font-weight:300}
-  body #foundation div#footer #accordion-1 .content a p {font-size: min(max(12px, 3vw), 16px);font-weight: 200;width: 100%;}
+  body #foundation div#footer #accordion-1 .content a p {font-size: min(max(12px, 3vw), 16px);font-weight: 200;width: 100%;margin: 0px 14px;padding-top: 10px;}
   #accordion-1 .content {width:100%;}
   #accordion-1 .content a {width:100%}
   body #foundation div#footer .wrap {width:100%}
@@ -1076,14 +1079,16 @@ body #foundation #topbox #contents {max-height:none;}
 #hero-block.ecosystem #inner-blocks .new-block {width:100%; margin-bottom:40px}
   #hero-block {padding-top:80px;min-height: 100vh;justify-content: center;}
     figure.scroll-logo {right:5%;}
+  body #foundation div#footer .wrap .row.left {width:100%;}
 }
 @media screen and (max-width: 799px) {
   body #foundation #staking .wrapper {width:80%}
 }
 @media screen and (max-width: 750px) {
+  body #foundation #topbox div.socials {justify-content:center;align-items: center;width: 100%;margin-top: -140px;}
   body #foundation #safe .numbers {flex-wrap:wrap;margin-top: 60px;}
   body #foundation #safe .numbers .number {width:50%; margin-top:50px}
-  body #foundation #topbox div.text {width:70%}
+  body #foundation #topbox div.text {width:70%;margin-top: -120px;}
   body #foundation #safe .secure .secure-text figure img {right:0%}
   body #foundation #safe .secure .secure-text .right {width:90%;}
   body #foundation #topbox figure.logo-bg img {height: 800px;width: 800px;aspect-ratio: 1;max-width: unset;max-height: unset;}
@@ -1114,7 +1119,7 @@ body #foundation #topbox .text h1 {font-size:35px;}
   body #foundation #topbox div.phone {position:relative;bottom: auto;left: auto;right: auto;width: 100%;text-align:center;display:inline-block;}
   body #foundation #topbox div.phone figure {width: 300px;margin: 0 auto;}
   body #foundation #safe {margin-top: 270px;}
-  body #foundation #topbox div.text {width: 80%;}
+  body #foundation #topbox div.text {width: 80%;margin-top: -160px;}
   body #foundation #safe .jbe .container {flex-wrap:wrap;}
   body #foundation #safe .jbe .container div p {padding:0px}
   body #foundation #safe .jbe .container div {width:70%;padding-bottom: 40px;}
@@ -1128,10 +1133,11 @@ body #foundation #topbox .text h1 {font-size:35px;}
   body #foundation #topbox #contents {/* padding:5% 4%; */}
   body #foundation #safe .secure .secure-text .right h3 {margin-top:40px}
   body #foundation #safe .secure .secure-text .right {margin-bottom:30px;}
-  body #foundation #topbox div.socials {bottom: 10px;right:0px;display: block;margin-top:0px;}
+  body #foundation #topbox div.socials {}
   body #foundation #safe .jbe {padding-bottom: 0px;}
-  body #foundation #topbox .ticker {margin-bottom:80px}
-  body #foundation #topbox div.socials div.socials {left:5%;}
+  body #foundation #topbox .ticker {}
+  body #foundation #topbox div.socials div.socials {/* left:5%; */}
+  body #foundation #topbox #contents {padding-top:0px;}
 }
 
 @media screen and (max-width: 500px) {

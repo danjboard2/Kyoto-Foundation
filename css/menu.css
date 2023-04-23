@@ -76,7 +76,6 @@ ul#menu ul li a:hover {
 	background: transparent;
 	width: 100%;
 	margin-left: 0px;
-	max-height: 88px;
 	/* border-bottom: 2px solid #f0f0f0; */
 	/* border-bottom-left-radius: 8px; */
 	/* border-bottom-right-radius: 8px; */
@@ -89,7 +88,7 @@ ul#menu ul li a:hover {
 	z-index: 20;
 	max-width: 3000px;
 	backdrop-filter: none;
-	top: 0px;
+	top: 40px;
 	padding: 16px 0px;
 	transition: 0.3s !important;
 }
@@ -101,6 +100,7 @@ ul#menu ul li a:hover {
     transition: 0.5s !important;
     height: 88px;
     backdrop-filter: blur(8px);
+    top: 0px;
     }
 .menuwrap .menuinner {max-width: 3000px;width: 100%;display: inline-block;position: relative;/* overflow-x: clip; */}
 .menuwrap .menuinner h3.title {float:left;font-size:30px;line-height: 28px;text-align:left;margin:0px;text-transform:uppercase;font-weight:500;color: #DFF4E7;height: 86px;display:flex;flex-flow: column;justify-content: center;align-items: baseline;padding-top: 3px;margin-left: 4%;/* text-shadow: 1px 1px 1px #2c5955; */}
@@ -352,9 +352,13 @@ h2.menu_title {font-size: 24px;/* margin: 29px; */margin-left: 0px;color: #a1d2b
 		z-index: 50;
 		position: relative;
 		mix-blend-mode: unset;
-		display: block;
-		height: auto;
+		display: inline-block;
+		width: 100%;
 	}
+.side_menu .container .socials {bottom:100px;position:absolute;flex-flow: column;display: none;width:92%;}
+.side_menu .container .socials p {text-align: left;color: #c0eed0;font-size: 16px;font-weight: 300;padding-left: 10px;border-bottom: 1px solid #c3f2d4;margin-bottom: 5px;padding-bottom: 8px;text-transform: uppercase;}
+.side_menu .container .socials-inner {flex-flow:row;display: flex;}
+.side_menu .container .socials-inner a figure {padding: 12px;}
 .side_menu.fixed {position: absolute;top: 84px;}
 
 /* HAMBURGER STYLES ----- */
@@ -368,6 +372,8 @@ h2.menu_title {font-size: 24px;/* margin: 29px; */margin-left: 0px;color: #a1d2b
 		top: -15px;
 	}
 	.burger_box .price-ticker {display:flex;align-items: center;}
+.burger_box .price-ticker:hover p {display:none}
+.burger_box .price-ticker:hover:after {content:'Launching soon';padding-left:10px; color:#dcf1e5;font-size: 20px;font-weight: bold;padding-right: 10px; text-transform:uppercase}
 	.burger_box .price-ticker p {padding-left:10px;color:#dcf1e5;font-size: 20px;font-weight: bold;padding-right: 10px;}
 	.burger_box a.menu-icon {
 		display: flex;
@@ -490,6 +496,10 @@ h2.menu_title {font-size: 24px;/* margin: 29px; */margin-left: 0px;color: #a1d2b
 .list_item a.active {
     background: rgba(255,255,255,.2);
 }
+
+@media screen and (max-width:850px){
+.burger_box .price-ticker:hover:after {font-size:16px;}
+}
 @media screen and (max-width:750px){
 	.burger_box .price-ticker p {margin-right:20px}
 .burger_box a.menu-icon {width:100px;}
@@ -498,7 +508,7 @@ h2.menu_title {font-size: 24px;/* margin: 29px; */margin-left: 0px;color: #a1d2b
 	.burger_box {right: -20px;}
 .burger_box a.menu-icon svg {max-width:30px}
 	.list_item a{font-size:16px;}
-	.menuwrap {padding-top:20px;}
+	.menuwrap {padding-top:20px;top: 0px;}
 
 }
 @media screen and (max-width:420px){

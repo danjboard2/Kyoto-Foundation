@@ -103,7 +103,7 @@ body {
   flex-basis: 60%;
   margin-right: auto;
 }
-
+    .philosophie .point h3 i {color: #A1D2B4}
 .point img {
   flex-basis: 25%;
   max-width: 25vw;
@@ -155,23 +155,23 @@ body {
   .point article {flex-basis:70%;}
   /* font sizes */
     .philosophie .point h3{font-size:35px}
-  .philosophie .point p {font-size:16px}
- .philosophie .butn {font-size:16px;}
+  .philosophie .point p {font-size: 18px;}
+ .philosophie .butn {font-size: 18px;}
 }
 @media screen and (max-width: 700px) {
   .philosophie .point {padding-right:1rem;}
 }
 @media screen and (max-width: 500px) {
-  
+    .philosophie .point p {font-size: 14px;}
+   .philosophie .butn {font-size: 14px;}
 .philosophie .point {flex-flow:column;justify-content: top;padding:2rem;padding-top: 5rem;}
 .point article {flex-basis: 60%;}
   .indicators {margin-top: 16vh;left:10px;}
   .point img {margin-right: 5rem;}
-  figure.scroll-logo {bottom: 35px;top: auto;height: 40%;width: 100%;justify-content: space-around;left: 0px;padding-top: 0px;}
+  figure.scroll-logo {bottom: 10%;top: auto;height: 25%;width: 100%;justify-content: space-around;left: 0px;padding-top: 0px;}
 figure.scroll-logo img  {
-    width: 65%;
 }
 }
 @media screen and ( max-height: 780px ) {
-.philosophie .point .third {display:none}
+.philosophie .point .third {}
 }

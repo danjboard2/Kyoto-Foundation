@@ -16,6 +16,7 @@
 /* accordion-1 */
 #accordion-1{
   position: relative;
+  width: 100%;
 }
 
 #accordion-1 .head{
@@ -35,7 +36,7 @@
 #accordion-1 .head:hover, #accordion-1 .active{
   background-color: transparent;
 }
-#accordion-1 figure img {transform: rotate(0deg);transition:0.3s;transform-origin: center;max-width: 35px;}
+#accordion-1 figure img {transform: rotate(0deg);transition:0.3s;transform-origin: center;max-width: 14px;}
 #accordion-1 .active figure img {transform: rotate(135deg);transition:0.3s;transform-origin: center;}
 #accordion-1 .arrow-animate{
   transform: rotate(0deg);
