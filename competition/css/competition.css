@@ -71,6 +71,7 @@ body #foundation.comp #topbox .inner-flex #maitre-widget #mtr-optin-form {
     width: 90% !important;
     border-radius: 30px !important;
     max-width: 900px !important;
+    box-shadow: none;
 }
 
 body #foundation.comp #topbox .inner-flex #maitre-widget #mtr-optin-form #mtr-form-status {
@@ -193,6 +194,7 @@ body #foundation.comp #steps {
     flex-flow: column;
     align-items: center;
     padding-bottom: 12px;
+    max-width: 100vw;
 }
 
 body #foundation.comp #steps .step-wrap {
@@ -260,7 +262,7 @@ body #foundation.comp #fast.waiting {
 
 body #foundation.comp #steps.tiers .step-wrap {
     justify-content: space-around;
-    max-width: 70vw;
+    max-width: 70%;
     padding-bottom: 72px;
 }
 
