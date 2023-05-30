@@ -65,20 +65,6 @@ $('.list_load').slideUp(300);
 });
 });
 
-ScrollTrigger.create({
-  trigger: "#hero-block",
-  start: "top top",
-  onEnter:self =>  {
-	$('.menuwrap').addClass('fixed'),
-	$('#background-blur').css("top", "88px")
-  },
-  onLeaveBack: self => {
-	$('.menuwrap').removeClass('fixed'),
-	$('#background-blur').css("top", "0px")
-  }
-  //onToggle: self => console.log("toggled, isActive:", self.isActive),
-  //onUpdate: self => { console.log("progress:", self.progress.toFixed(3), "direction:", self.direction, "velocity", self.getVelocity());}
-});
 				$('.head').click(function(){
 					$(this).toggleClass('active');
 					$(this).parent().find('.arrow').toggleClass('arrow-animate');
@@ -164,7 +150,7 @@ ScrollTrigger.create({
 					<p>Join our community</p>
 					<div class="socials-inner">
 						<a href="https://discord.gg/kyotoprotocol" target="_blank"><figure><img src="images/social/discord.png"></figure></a>
-						<a href="https://twitter.com/official_kpio" target="_blank"><figure><img src="images/social/twitter.png"></figure></a>
+						<a href="https://twitter.com/KyotoRefi" target="_blank"><figure><img src="images/social/twitter.png"></figure></a>
 						<a href="https://medium.com/@KyotoProtocol.io" target="_blank"><figure><img src="images/social/medium.png"></figure></a>
 						<a href="https://www.youtube.com/channel/UCIijeBIESm9rnnckEwbU14g" target="_blank"><figure><img src="images/social/youtube.png"></figure></a>
 						<a href="https://t.me/KyotoProtocol" target="_blank"><figure><img src="images/social/telegram.png"></figure></a>
@@ -195,7 +181,7 @@ ScrollTrigger.create({
 					</div>
 					<div class="socials">
 						<a href="https://discord.gg/kyotoprotocol" target="_blank"><figure><img src="images/social/discord.png"></figure></a>
-						<a href="https://twitter.com/official_kpio" target="_blank"><figure><img src="images/social/twitter.png"></figure></a>
+						<a href="https://twitter.com/KyotoRefi" target="_blank"><figure><img src="images/social/twitter.png"></figure></a>
 						<a href="https://medium.com/@KyotoProtocol.io" target="_blank"><figure><img src="images/social/medium.png"></figure></a>
 						<a href="https://www.youtube.com/channel/UCIijeBIESm9rnnckEwbU14g" target="_blank"><figure><img src="images/social/youtube.png"></figure></a>
 						<a href="https://t.me/KyotoProtocol" target="_blank"><figure><img src="images/social/telegram.png"></figure></a>
@@ -354,7 +340,7 @@ ScrollTrigger.create({
 				<p>Join our community</p>
 				<div class="social-inner">
 					<a href="https://discord.gg/kyotoprotocol" target="_blank"><figure><img src="images/social/discord-footer.png"></figure></a>
-					<a href="https://twitter.com/official_kpio" target="_blank"><figure><img src="images/social/twitter-footer.png"></figure></a>
+					<a href="https://twitter.com/KyotoRefi" target="_blank"><figure><img src="images/social/twitter-footer.png"></figure></a>
 					<a href="https://medium.com/@KyotoProtocol.io" target="_blank"><figure><img src="images/social/medium-footer.png"></figure></a>
 					<a href="https://www.youtube.com/channel/UCIijeBIESm9rnnckEwbU14g" target="_blank"><figure><img src="images/social/youtube-footer.png"></figure></a>
 					<a href="https://t.me/KyotoProtocol" target="_blank"><figure><img src="images/social/telegram-footer.png"></figure></a>
